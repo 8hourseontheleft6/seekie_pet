@@ -3,9 +3,9 @@
 桌面宠物机器人 - 机器人在菜单栏上移动
 一个轻量级的桌面宠物应用，显示一个机器人在系统托盘区域移动
 
-版本: 3.0.0
+版本: 3.0.1
 修改日期: 2026-04-11
-更新: 重大更新 - 使用Robot.png图片代替蓝色小方块
+更新: 修复版本 - 解决图片透明边缘黑边问题
 """
 
 import tkinter as tk
@@ -86,22 +86,32 @@ class DesktopPetCar:
         self.draw_car()
     
     def create_window(self):
-        """创建透明窗口"""
+        """创建透明窗口 - 使用alpha通道实现真正透明"""
         self.window = tk.Tk()
         self.window.title("桌面宠物机器人")
         self.window.overrideredirect(True)  # 移除窗口边框
         self.window.attributes('-topmost', True)  # 保持在最前面
-        self.window.attributes('-transparentcolor', 'white')  # 设置透明色
         
-        # 创建画布
+        # 方法1: 使用alpha通道设置窗口透明度（更现代的方法）
+        # 注意：某些系统可能不支持'-alpha'属性
+        try:
+            self.window.attributes('-alpha', 0.99)  # 设置轻微透明度，触发透明窗口模式
+        except:
+            pass  # 如果不支持，回退到透明色方法
+        
+        # 创建画布 - 使用黑色背景，然后设置透明色
+        # 黑色在机器人图片中不常见，减少冲突
         self.canvas = tk.Canvas(
             self.window, 
             width=self.car_size, 
             height=self.car_size,
             highlightthickness=0,
-            bg='white'
+            bg='black'  # 使用黑色作为背景
         )
         self.canvas.pack()
+        
+        # 设置黑色为透明色
+        self.window.attributes('-transparentcolor', 'black')
         
         # 注意：这里不立即绘制，等图片加载后再绘制
         
@@ -227,7 +237,7 @@ class DesktopPetCar:
         # 添加内容
         tk.Label(
             about_window,
-            text="桌面宠物机器人 v3.0.0",
+            text="桌面宠物机器人 v3.0.1",
             font=("Arial", 16, "bold")
         ).pack(pady=10)
         
@@ -236,7 +246,7 @@ class DesktopPetCar:
             text="一个轻量级的桌面宠物应用\n\n"
                  "机器人会在你的菜单栏区域移动\n"
                  "你可以通过系统托盘图标控制它\n\n"
-                 "版本: 3.0.0 (重大更新: 使用Robot.png图片)\n"
+                 "版本: 3.0.1 (修复版本: 解决图片透明边缘黑边问题)\n"
                  "作者: 桌面宠物项目",
             justify=tk.LEFT
         ).pack(pady=10, padx=20)
@@ -342,8 +352,8 @@ class DesktopPetCar:
 
 def main():
     """主函数"""
-    print("启动桌面宠物机器人 v3.0.0...")
-    print("重大更新: 使用Robot.png图片作为桌面宠物")
+    print("启动桌面宠物机器人 v3.0.1...")
+    print("修复版本: 解决图片透明边缘黑边问题")
     print("优化: 高帧率流畅动画（约20FPS）")
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制机器人")
