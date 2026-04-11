@@ -176,5 +176,5 @@ desktop_pet_car/
 
 ## 作者
 
-NGC2237-Albus  
-（8左边的白马6进行了少量辅助工作）
+DeepSeek AI  
+（NGC2237-Albus进行了少量辅助工作）
