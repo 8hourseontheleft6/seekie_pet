@@ -85,108 +85,66 @@ class DesktopPetCar:
         self.window.geometry(f"+{x_pos}+{y_pos}")
     
     def draw_car(self):
-        """在画布上绘制小车，根据方向显示不同数量的轮子"""
+        """在画布上绘制蓝色小方块"""
         self.canvas.delete("all")
         
-        # 小车主体 (矩形) - 增加尺寸让各部分更清晰
-        body_width = self.car_size - 16  # 增加车身宽度
-        body_height = self.car_size // 2 + 4  # 增加车身高度
-        body_x = 8
-        body_y = (self.car_size - body_height) // 2 + 2
+        # 蓝色小方块 - 简单的正方形
+        square_size = self.car_size - 12  # 方块大小，留出边距
+        square_x = 6
+        square_y = 6
         
-        # 绘制车身
+        # 绘制蓝色小方块
         self.canvas.create_rectangle(
-            body_x, body_y,
-            body_x + body_width, body_y + body_height,
-            fill='#FF6B6B',  # 红色
-            outline='#CC5555',
-            width=3,  # 增加边框宽度
+            square_x, square_y,
+            square_x + square_size, square_y + square_size,
+            fill='#4169E1',  # 皇家蓝
+            outline='#1E3A8A',  # 深蓝色边框
+            width=2,  # 边框宽度
             tags="car"
         )
         
-        # 绘制车轮 - 调整位置，让轮子更高
-        wheel_radius = 7  # 增加轮子半径
-        # 将轮子绘制在车身内部，更靠上
-        wheel_y = body_y + body_height - 8  # 从-2改为-8，让轮子更高
-        
-        # 根据方向决定显示几个轮子
-        # 当direction=1（向右）或direction=-1（向左）时，显示一个轮子（侧面视角）
-        # 只有当direction=0（停止或正面）时才显示两个轮子
-        if self.direction == 0:
-            # 正面视角：显示两个轮子
-            # 左轮
-            self.canvas.create_oval(
-                body_x + 5, wheel_y - wheel_radius,
-                body_x + 5 + wheel_radius*2, wheel_y + wheel_radius,
-                fill='#333333',  # 黑色
-                outline='#000000',
-                width=1,
-                tags="car"
-            )
-            
-            # 右轮
-            self.canvas.create_oval(
-                body_x + body_width - 5 - wheel_radius*2, wheel_y - wheel_radius,
-                body_x + body_width - 5, wheel_y + wheel_radius,
-                fill='#333333',  # 黑色
-                outline='#000000',
-                width=1,
-                tags="car"
-            )
-        else:
-            # 侧面视角：只显示一个轮子
-            # 根据方向决定轮子位置
-            if self.direction == 1:  # 向右移动
-                # 显示右侧轮子
-                wheel_x = body_x + body_width - 5 - wheel_radius*2
-            else:  # 向左移动
-                # 显示左侧轮子
-                wheel_x = body_x + 5
-            
-            self.canvas.create_oval(
-                wheel_x, wheel_y - wheel_radius,
-                wheel_x + wheel_radius*2, wheel_y + wheel_radius,
-                fill='#333333',  # 黑色
-                outline='#000000',
-                width=2,  # 侧面视角轮子稍微粗一点
-                tags="car"
-            )
-        
-        # 绘制车窗 - 增加尺寸
-        window_width = body_width // 3 + 2
-        window_height = body_height // 2 + 2
-        window_x = body_x + body_width - window_width - 8
-        window_y = body_y + 8
-        
-        self.canvas.create_rectangle(
-            window_x, window_y,
-            window_x + window_width, window_y + window_height,
-            fill='#87CEEB',  # 天蓝色
-            outline='#5D9BBA',
-            width=2,  # 增加边框宽度
-            tags="car"
-        )
-        
-        # 绘制方向指示器（小箭头） - 增加尺寸
+        # 如果正在移动，添加滚动效果（旋转的小方块）
         if self.direction != 0:
-            arrow_size = 6
-            if self.direction == 1:  # 向右
-                arrow_points = [
-                    body_x + body_width - 2, body_y + body_height//2,
-                    body_x + body_width - 2 - arrow_size, body_y + body_height//2 - arrow_size,
-                    body_x + body_width - 2 - arrow_size, body_y + body_height//2 + arrow_size
-                ]
-            else:  # 向左
-                arrow_points = [
-                    body_x + 2, body_y + body_height//2,
-                    body_x + 2 + arrow_size, body_y + body_height//2 - arrow_size,
-                    body_x + 2 + arrow_size, body_y + body_height//2 + arrow_size
-                ]
+            # 根据方向添加滚动效果线
+            line_count = 3
+            line_spacing = square_size // (line_count + 1)
             
-            self.canvas.create_polygon(
-                arrow_points,
-                fill='#FFFFFF',
-                outline='#333333',
+            for i in range(1, line_count + 1):
+                line_x = square_x + i * line_spacing
+                
+                if self.direction == 1:  # 向右滚动
+                    # 向右滚动的斜线
+                    self.canvas.create_line(
+                        line_x, square_y + 4,
+                        line_x + 4, square_y + square_size - 4,
+                        fill='#87CEEB',  # 浅蓝色
+                        width=1,
+                        tags="car"
+                    )
+                else:  # 向左滚动
+                    # 向左滚动的斜线
+                    self.canvas.create_line(
+                        line_x, square_y + 4,
+                        line_x - 4, square_y + square_size - 4,
+                        fill='#87CEEB',  # 浅蓝色
+                        width=1,
+                        tags="car"
+                    )
+        
+        # 添加小方块内部的装饰点
+        dot_positions = [
+            (square_x + square_size//3, square_y + square_size//3),
+            (square_x + 2*square_size//3, square_y + square_size//3),
+            (square_x + square_size//3, square_y + 2*square_size//3),
+            (square_x + 2*square_size//3, square_y + 2*square_size//3)
+        ]
+        
+        for dot_x, dot_y in dot_positions:
+            self.canvas.create_oval(
+                dot_x - 2, dot_y - 2,
+                dot_x + 2, dot_y + 2,
+                fill='#FFFFFF',  # 白色
+                outline='#1E3A8A',
                 width=1,
                 tags="car"
             )
@@ -197,11 +155,14 @@ class DesktopPetCar:
         image = Image.new('RGB', (64, 64), color='white')
         draw = ImageDraw.Draw(image)
         
-        # 绘制小车图标
-        draw.rectangle([10, 20, 54, 40], fill='#FF6B6B', outline='#CC5555', width=2)
-        draw.ellipse([15, 45, 25, 55], fill='#333333', outline='#000000', width=1)
-        draw.ellipse([39, 45, 49, 55], fill='#333333', outline='#000000', width=1)
-        draw.rectangle([40, 22, 50, 30], fill='#87CEEB', outline='#5D9BBA', width=1)
+        # 绘制蓝色小方块图标
+        draw.rectangle([20, 20, 44, 44], fill='#4169E1', outline='#1E3A8A', width=2)
+        
+        # 添加装饰点
+        draw.ellipse([26, 26, 30, 30], fill='#FFFFFF', outline='#1E3A8A', width=1)
+        draw.ellipse([34, 26, 38, 30], fill='#FFFFFF', outline='#1E3A8A', width=1)
+        draw.ellipse([26, 34, 30, 38], fill='#FFFFFF', outline='#1E3A8A', width=1)
+        draw.ellipse([34, 34, 38, 38], fill='#FFFFFF', outline='#1E3A8A', width=1)
         
         # 创建菜单
         menu = (
@@ -276,16 +237,16 @@ class DesktopPetCar:
         # 添加内容
         tk.Label(
             about_window,
-            text="桌面宠物小车 v2.0.4",
+            text="桌面宠物小方块 v2.0.4",
             font=("Arial", 16, "bold")
         ).pack(pady=10)
         
         tk.Label(
             about_window,
             text="一个轻量级的桌面宠物应用\n\n"
-                 "二轮小车会在你的菜单栏区域移动\n"
+                 "蓝色小方块会在你的菜单栏区域滚动\n"
                  "你可以通过系统托盘图标控制它\n\n"
-                 "版本: 2.0.4 (修复小车启动位置问题)\n"
+                 "版本: 2.0.4 (蓝色小方块设计)\n"
                  "作者: 桌面宠物项目",
             justify=tk.LEFT
         ).pack(pady=10, padx=20)
@@ -391,18 +352,18 @@ class DesktopPetCar:
 
 def main():
     """主函数"""
-    print("启动桌面宠物小车 v2.0.4...")
+    print("启动桌面宠物小方块 v2.0.4...")
+    print("更新: 蓝色小方块在菜单栏上滚来滚去")
     print("修复: 小车启动位置问题（启动时直接出现在右下角菜单栏）")
-    print("修复: 垂直偏移方向错误（从+15改为-5）")
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制小车")
     print("=" * 40)
     print("功能特点:")
     print("- 限制在屏幕右半边移动")
     print("- 大约每分钟移动一次")
-    print("- 根据方向显示不同数量的轮子")
-    print("- 降低移动速度")
-    print("- 48像素大尺寸，车身更清晰")
+    print("- 蓝色小方块，简洁美观")
+    print("- 移动时有滚动效果")
+    print("- 48像素大小，适合菜单栏")
     print("=" * 40)
     
     pet = DesktopPetCar()
