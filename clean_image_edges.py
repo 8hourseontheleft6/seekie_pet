@@ -4,6 +4,7 @@
 """
 
 import os
+import shutil
 from PIL import Image
 
 def clean_image_edges(input_path, output_path, threshold=10):
@@ -72,7 +73,7 @@ def process_robot_images():
     # 定义文件路径
     source_100x100 = os.path.join("main_pic", "Robot_100x100.png")
     source_50x50 = os.path.join("main_pic", "Robot_50x50.png")
-    cleaned_50x50 = os.path.join("main_pic", "Robot_50x50_cleaned.png")
+    # 不再创建临时文件，直接修改原始文件
     
     # 检查源图像是否存在
     if not os.path.exists(source_100x100):
@@ -83,25 +84,22 @@ def process_robot_images():
         print(f"错误: 未找到50x50图像: {source_50x50}")
         return False
     
-    # 备份原始50x50图像
-    import shutil
-    backup_path = os.path.join("main_pic", "Robot_50x50_original.png")
-    shutil.copy2(source_50x50, backup_path)
-    print(f"已备份原始50x50图像到: {backup_path}")
+    # 注意：不再创建备份文件，因为可以从Git历史恢复
+    # 如果需要备份，请手动复制文件
+    print("注意：清理过程将直接修改原始文件")
+    print("如果需要备份，请先手动复制Robot_50x50.png")
     
-    # 清理50x50图像边缘
+    # 清理50x50图像边缘（直接修改原始文件）
     print("\n清理50x50图像边缘...")
-    success = clean_image_edges(source_50x50, cleaned_50x50, threshold=30)
+    success = clean_image_edges(source_50x50, source_50x50, threshold=30)
     
     if success:
-        # 用清理后的图像替换原始图像
-        shutil.copy2(cleaned_50x50, source_50x50)
-        print(f"\n已用清理后的图像替换原始图像")
+        print(f"\n已直接清理原始图像")
         
         # 显示文件信息
-        original_size = os.path.getsize(backup_path)
-        cleaned_size = os.path.getsize(source_50x50)
-        print(f"文件大小: {original_size/1024:.1f}KB → {cleaned_size/1024:.1f}KB")
+        if os.path.exists(source_50x50):
+            cleaned_size = os.path.getsize(source_50x50)
+            print(f"清理后文件大小: {cleaned_size/1024:.1f}KB")
         
         print("\n" + "=" * 50)
         print("清理完成!")
