@@ -87,8 +87,9 @@ class DesktopPetCar:
         )
         
         # 绘制车轮
-        wheel_radius = 6
-        wheel_y = body_y + body_height + 2
+        wheel_radius = 5  # 稍微减小轮子半径
+        # 将轮子绘制在车身内部，而不是下方
+        wheel_y = body_y + body_height - 3
         
         # 根据方向决定显示几个轮子
         # 当direction=1（向右）或direction=-1（向左）时，显示一个轮子（侧面视角）
@@ -231,9 +232,10 @@ class DesktopPetCar:
         max_x = screen_width - self.car_size
         x = random.randint(min_x, max_x)
         
-        # 保持在底部菜单栏区域
+        # 保持在底部菜单栏区域，增加垂直偏移避免轮子被遮挡
         taskbar_height = 40
-        y = screen_height - taskbar_height - self.car_size
+        vertical_offset = 8  # 向上偏移8像素
+        y = screen_height - taskbar_height - self.car_size + vertical_offset
         
         self.window.geometry(f"+{x}+{y}")
         
@@ -316,8 +318,10 @@ class DesktopPetCar:
                     screen_height = self.window.winfo_screenheight()
                     
                     # 计算新位置 (在屏幕底部边缘移动，模拟菜单栏)
+                    # 增加垂直偏移，避免轮子被菜单栏遮挡
                     taskbar_height = 40  # 假设任务栏高度
-                    y_pos = screen_height - taskbar_height - self.car_size
+                    vertical_offset = 8  # 向上偏移8像素
+                    y_pos = screen_height - taskbar_height - self.car_size + vertical_offset
                     
                     # 更新水平位置（限制在50-100范围内，即右半边）
                     self.position += self.direction * self.speed
