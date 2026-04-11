@@ -51,9 +51,6 @@ class DesktopPetCar:
         self.window.attributes('-topmost', True)  # 保持在最前面
         self.window.attributes('-transparentcolor', 'white')  # 设置透明色
         
-        # 设置窗口大小和位置
-        self.window.geometry(f"{self.car_size}x{self.car_size}+100+100")
-        
         # 创建画布
         self.canvas = tk.Canvas(
             self.window, 
@@ -66,6 +63,26 @@ class DesktopPetCar:
         
         # 绘制小车
         self.draw_car()
+        
+        # 更新窗口以获取正确的尺寸信息
+        self.window.update()
+        
+        # 计算初始位置（右下角菜单栏区域）
+        screen_width = self.window.winfo_screenwidth()
+        screen_height = self.window.winfo_screenheight()
+        
+        # 限制在右半边（初始位置在75，即右半边的中间偏右）
+        max_x = screen_width - self.car_size
+        # 将75的位置映射到屏幕右半边的x坐标
+        x_pos = int((self.position - 50) / 50 * (max_x / 2) + (max_x / 2))
+        
+        # 保持在底部菜单栏区域，调整垂直偏移让小车在合适位置
+        taskbar_height = 40
+        vertical_offset = -5  # 负偏移，让小车更低
+        y_pos = screen_height - taskbar_height - self.car_size + vertical_offset
+        
+        # 设置窗口位置
+        self.window.geometry(f"+{x_pos}+{y_pos}")
     
     def draw_car(self):
         """在画布上绘制小车，根据方向显示不同数量的轮子"""
