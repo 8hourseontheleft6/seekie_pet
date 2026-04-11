@@ -27,7 +27,7 @@ class DesktopPetCar:
         self.running = True
         self.position = 75  # 小车在菜单栏上的位置 (50-100，限制在右半边)
         self.direction = 0  # 移动方向: 1=向右, -1=向左, 0=停止
-        self.speed = 0.3  # 移动速度 (降低速度)
+        self.speed = 1.5  # 提高移动速度 (原0.3太低)
         self.car_size = 48  # 小车大小（从32增加到48，让车身更清晰）
         self.last_move_time = time.time()  # 上次移动时间
         self.move_interval = 60  # 移动间隔(秒)，大约一分钟
@@ -195,11 +195,11 @@ class DesktopPetCar:
     
     def increase_speed(self, icon, item):
         """增加小车速度"""
-        self.speed = min(2.0, self.speed + 0.1)  # 最大速度2.0
+        self.speed = min(5.0, self.speed + 0.5)  # 提高最大速度到5.0
     
     def decrease_speed(self, icon, item):
         """减小小车速度"""
-        self.speed = max(0.1, self.speed - 0.1)  # 最小速度0.1
+        self.speed = max(0.5, self.speed - 0.5)  # 提高最小速度到0.5
     
     def random_position(self, icon, item):
         """将小车移动到随机位置（限制在右半边）"""
@@ -305,7 +305,7 @@ class DesktopPetCar:
                     y_pos = screen_height - taskbar_height - self.car_size + vertical_offset
                     
                     # 更新水平位置（限制在50-100范围内，即右半边）
-                    self.position += self.direction * self.speed
+                    self.position += self.direction * self.speed * 0.05  # 调整速度因子
                     
                     # 边界检查（限制在右半边）
                     if self.position < 50:
@@ -337,7 +337,7 @@ class DesktopPetCar:
                         self.direction = 0
                         self.window.after(0, self.draw_car)
                 
-                time.sleep(0.5)  # 降低更新频率，节省资源
+                time.sleep(0.05)  # 提高帧率到大约20FPS（原0.5秒太卡）
                 
             except Exception as e:
                 print(f"动画错误: {e}")
@@ -354,7 +354,7 @@ def main():
     """主函数"""
     print("启动桌面宠物小方块 v2.0.4...")
     print("更新: 蓝色小方块在菜单栏上滚来滚去")
-    print("修复: 小车启动位置问题（启动时直接出现在右下角菜单栏）")
+    print("优化: 提高帧率和移动速度（解决卡顿问题）")
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制小车")
     print("=" * 40)
@@ -362,7 +362,7 @@ def main():
     print("- 限制在屏幕右半边移动")
     print("- 大约每分钟移动一次")
     print("- 蓝色小方块，简洁美观")
-    print("- 移动时有滚动效果")
+    print("- 高帧率流畅动画（约20FPS）")
     print("- 48像素大小，适合菜单栏")
     print("=" * 40)
     
