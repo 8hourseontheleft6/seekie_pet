@@ -3,9 +3,9 @@
 桌面宠物小车 - 二轮小车在菜单栏上移动
 一个轻量级的桌面宠物应用，显示一个二轮小车在系统托盘区域移动
 
-版本: 2.0.3
+版本: 2.0.1
 修改日期: 2026-04-11
-修复: 修正垂直偏移方向错误问题（从+15改为-5）
+修复: 小车位置过高问题
 """
 
 import tkinter as tk
@@ -28,7 +28,7 @@ class DesktopPetCar:
         self.position = 75  # 小车在菜单栏上的位置 (50-100，限制在右半边)
         self.direction = 0  # 移动方向: 1=向右, -1=向左, 0=停止
         self.speed = 0.3  # 移动速度 (降低速度)
-        self.car_size = 48  # 小车大小（从32增加到48，让车身更清晰）
+        self.car_size = 32  # 小车大小
         self.last_move_time = time.time()  # 上次移动时间
         self.move_interval = 60  # 移动间隔(秒)，大约一分钟
         self.is_moving = False  # 是否正在移动
@@ -71,11 +71,11 @@ class DesktopPetCar:
         """在画布上绘制小车，根据方向显示不同数量的轮子"""
         self.canvas.delete("all")
         
-        # 小车主体 (矩形) - 增加尺寸让各部分更清晰
-        body_width = self.car_size - 16  # 增加车身宽度
-        body_height = self.car_size // 2 + 4  # 增加车身高度
-        body_x = 8
-        body_y = (self.car_size - body_height) // 2 + 2
+        # 小车主体 (矩形)
+        body_width = self.car_size - 10
+        body_height = self.car_size // 2
+        body_x = 5
+        body_y = (self.car_size - body_height) // 2
         
         # 绘制车身
         self.canvas.create_rectangle(
@@ -83,14 +83,14 @@ class DesktopPetCar:
             body_x + body_width, body_y + body_height,
             fill='#FF6B6B',  # 红色
             outline='#CC5555',
-            width=3,  # 增加边框宽度
+            width=2,
             tags="car"
         )
         
-        # 绘制车轮 - 调整位置，让轮子更高
-        wheel_radius = 7  # 增加轮子半径
-        # 将轮子绘制在车身内部，更靠上
-        wheel_y = body_y + body_height - 8  # 从-2改为-8，让轮子更高
+        # 绘制车轮
+        wheel_radius = 5  # 稍微减小轮子半径
+        # 将轮子绘制在车身内部，而不是下方
+        wheel_y = body_y + body_height - 3
         
         # 根据方向决定显示几个轮子
         # 当direction=1（向右）或direction=-1（向左）时，显示一个轮子（侧面视角）
@@ -135,24 +135,24 @@ class DesktopPetCar:
                 tags="car"
             )
         
-        # 绘制车窗 - 增加尺寸
-        window_width = body_width // 3 + 2
-        window_height = body_height // 2 + 2
-        window_x = body_x + body_width - window_width - 8
-        window_y = body_y + 8
+        # 绘制车窗
+        window_width = body_width // 3
+        window_height = body_height // 2
+        window_x = body_x + body_width - window_width - 5
+        window_y = body_y + 5
         
         self.canvas.create_rectangle(
             window_x, window_y,
             window_x + window_width, window_y + window_height,
             fill='#87CEEB',  # 天蓝色
             outline='#5D9BBA',
-            width=2,  # 增加边框宽度
+            width=1,
             tags="car"
         )
         
-        # 绘制方向指示器（小箭头） - 增加尺寸
+        # 绘制方向指示器（小箭头）
         if self.direction != 0:
-            arrow_size = 6
+            arrow_size = 4
             if self.direction == 1:  # 向右
                 arrow_points = [
                     body_x + body_width - 2, body_y + body_height//2,
@@ -233,9 +233,9 @@ class DesktopPetCar:
         max_x = screen_width - self.car_size
         x = random.randint(min_x, max_x)
         
-        # 保持在底部菜单栏区域，调整垂直偏移让小车在合适位置
+        # 保持在底部菜单栏区域，轻微垂直偏移
         taskbar_height = 40
-        vertical_offset = -5  # 负偏移，让小车更低（原15太高，导致小车埋在菜单栏以下）
+        vertical_offset = 2  # 轻微向上偏移2像素（原8太大，导致小车飞到天上）
         y = screen_height - taskbar_height - self.car_size + vertical_offset
         
         self.window.geometry(f"+{x}+{y}")
@@ -259,7 +259,7 @@ class DesktopPetCar:
         # 添加内容
         tk.Label(
             about_window,
-            text="桌面宠物小车 v2.0.3",
+            text="桌面宠物小车 v2.0.1",
             font=("Arial", 16, "bold")
         ).pack(pady=10)
         
@@ -268,7 +268,7 @@ class DesktopPetCar:
             text="一个轻量级的桌面宠物应用\n\n"
                  "二轮小车会在你的菜单栏区域移动\n"
                  "你可以通过系统托盘图标控制它\n\n"
-                 "版本: 2.0.3 (修正垂直偏移方向错误)\n"
+                 "版本: 2.0.1 (修复位置问题)\n"
                  "作者: 桌面宠物项目",
             justify=tk.LEFT
         ).pack(pady=10, padx=20)
@@ -321,9 +321,9 @@ class DesktopPetCar:
                     screen_height = self.window.winfo_screenheight()
                     
                     # 计算新位置 (在屏幕底部边缘移动，模拟菜单栏)
-                    # 调整垂直偏移，让小车在合适位置
+                    # 调整垂直偏移，让小车在合适的位置
                     taskbar_height = 40  # 假设任务栏高度
-                    vertical_offset = -5  # 负偏移，让小车更低（原15太高，导致小车埋在菜单栏以下）
+                    vertical_offset = 2  # 轻微向上偏移2像素（原8太大，导致小车飞到天上）
                     y_pos = screen_height - taskbar_height - self.car_size + vertical_offset
                     
                     # 更新水平位置（限制在50-100范围内，即右半边）
@@ -374,9 +374,8 @@ class DesktopPetCar:
 
 def main():
     """主函数"""
-    print("启动桌面宠物小车 v2.0.3...")
-    print("修复: 修正垂直偏移方向错误（从+15改为-5）")
-    print("修复: 轮子被菜单栏遮挡问题")
+    print("启动桌面宠物小车 v2.0.1...")
+    print("修复: 小车位置过高问题（垂直偏移从8调整为2）")
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制小车")
     print("=" * 40)
@@ -385,7 +384,6 @@ def main():
     print("- 大约每分钟移动一次")
     print("- 根据方向显示不同数量的轮子")
     print("- 降低移动速度")
-    print("- 48像素大尺寸，车身更清晰")
     print("=" * 40)
     
     pet = DesktopPetCar()

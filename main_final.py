@@ -3,9 +3,9 @@
 桌面宠物小车 - 二轮小车在菜单栏上移动
 一个轻量级的桌面宠物应用，显示一个二轮小车在系统托盘区域移动
 
-版本: 2.0.3
+版本: 2.0.2
 修改日期: 2026-04-11
-修复: 修正垂直偏移方向错误问题（从+15改为-5）
+修复: 轮子被菜单栏遮挡问题，增加垂直偏移
 """
 
 import tkinter as tk
@@ -233,9 +233,9 @@ class DesktopPetCar:
         max_x = screen_width - self.car_size
         x = random.randint(min_x, max_x)
         
-        # 保持在底部菜单栏区域，调整垂直偏移让小车在合适位置
+        # 保持在底部菜单栏区域，增加垂直偏移避免轮子被遮挡
         taskbar_height = 40
-        vertical_offset = -5  # 负偏移，让小车更低（原15太高，导致小车埋在菜单栏以下）
+        vertical_offset = 15  # 增加垂直偏移到15像素，让小车更高
         y = screen_height - taskbar_height - self.car_size + vertical_offset
         
         self.window.geometry(f"+{x}+{y}")
@@ -259,7 +259,7 @@ class DesktopPetCar:
         # 添加内容
         tk.Label(
             about_window,
-            text="桌面宠物小车 v2.0.3",
+            text="桌面宠物小车 v2.0.2",
             font=("Arial", 16, "bold")
         ).pack(pady=10)
         
@@ -268,7 +268,7 @@ class DesktopPetCar:
             text="一个轻量级的桌面宠物应用\n\n"
                  "二轮小车会在你的菜单栏区域移动\n"
                  "你可以通过系统托盘图标控制它\n\n"
-                 "版本: 2.0.3 (修正垂直偏移方向错误)\n"
+                 "版本: 2.0.2 (修复轮子遮挡问题)\n"
                  "作者: 桌面宠物项目",
             justify=tk.LEFT
         ).pack(pady=10, padx=20)
@@ -321,9 +321,9 @@ class DesktopPetCar:
                     screen_height = self.window.winfo_screenheight()
                     
                     # 计算新位置 (在屏幕底部边缘移动，模拟菜单栏)
-                    # 调整垂直偏移，让小车在合适位置
+                    # 增加垂直偏移，避免轮子被菜单栏遮挡
                     taskbar_height = 40  # 假设任务栏高度
-                    vertical_offset = -5  # 负偏移，让小车更低（原15太高，导致小车埋在菜单栏以下）
+                    vertical_offset = 15  # 增加垂直偏移到15像素，让小车更高
                     y_pos = screen_height - taskbar_height - self.car_size + vertical_offset
                     
                     # 更新水平位置（限制在50-100范围内，即右半边）
@@ -374,9 +374,9 @@ class DesktopPetCar:
 
 def main():
     """主函数"""
-    print("启动桌面宠物小车 v2.0.3...")
-    print("修复: 修正垂直偏移方向错误（从+15改为-5）")
-    print("修复: 轮子被菜单栏遮挡问题")
+    print("启动桌面宠物小车 v2.0.2...")
+    print("修复: 轮子被菜单栏遮挡问题（垂直偏移增加到15像素）")
+    print("修复: 轮子绘制位置调整（更靠上）")
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制小车")
     print("=" * 40)
