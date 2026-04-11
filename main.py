@@ -21,10 +21,13 @@ class DesktopPetCar:
         self.window = None
         self.icon = None
         self.running = True
-        self.position = 0  # 小车在菜单栏上的位置 (0-100)
-        self.direction = 1  # 移动方向: 1=向右, -1=向左
-        self.speed = 2  # 移动速度
+        self.position = 75  # 小车在菜单栏上的位置 (50-100，限制在右半边)
+        self.direction = 0  # 移动方向: 1=向右, -1=向左, 0=停止
+        self.speed = 0.3  # 移动速度 (降低速度)
         self.car_size = 32  # 小车大小
+        self.last_move_time = time.time()  # 上次移动时间
+        self.move_interval = 60  # 移动间隔(秒)，大约一分钟
+        self.is_moving = False  # 是否正在移动
         
         # 创建主窗口
         self.create_window()
@@ -61,7 +64,7 @@ class DesktopPetCar:
         self.draw_car()
     
     def draw_car(self):
-        """在画布上绘制二轮小车"""
+        """在画布上绘制小车，根据方向显示不同数量的轮子"""
         self.canvas.delete("all")
         
         # 小车主体 (矩形)
@@ -84,25 +87,48 @@ class DesktopPetCar:
         wheel_radius = 6
         wheel_y = body_y + body_height + 2
         
-        # 左轮
-        self.canvas.create_oval(
-            body_x + 5, wheel_y - wheel_radius,
-            body_x + 5 + wheel_radius*2, wheel_y + wheel_radius,
-            fill='#333333',  # 黑色
-            outline='#000000',
-            width=1,
-            tags="car"
-        )
-        
-        # 右轮
-        self.canvas.create_oval(
-            body_x + body_width - 5 - wheel_radius*2, wheel_y - wheel_radius,
-            body_x + body_width - 5, wheel_y + wheel_radius,
-            fill='#333333',  # 黑色
-            outline='#000000',
-            width=1,
-            tags="car"
-        )
+        # 根据方向决定显示几个轮子
+        # 当direction=1（向右）或direction=-1（向左）时，显示一个轮子（侧面视角）
+        # 只有当direction=0（停止或正面）时才显示两个轮子
+        if self.direction == 0:
+            # 正面视角：显示两个轮子
+            # 左轮
+            self.canvas.create_oval(
+                body_x + 5, wheel_y - wheel_radius,
+                body_x + 5 + wheel_radius*2, wheel_y + wheel_radius,
+                fill='#333333',  # 黑色
+                outline='#000000',
+                width=1,
+                tags="car"
+            )
+            
+            # 右轮
+            self.canvas.create_oval(
+                body_x + body_width - 5 - wheel_radius*2, wheel_y - wheel_radius,
+                body_x + body_width - 5, wheel_y + wheel_radius,
+                fill='#333333',  # 黑色
+                outline='#000000',
+                width=1,
+                tags="car"
+            )
+        else:
+            # 侧面视角：只显示一个轮子
+            # 根据方向决定轮子位置
+            if self.direction == 1:  # 向右移动
+                # 显示右侧轮子
+                wheel_x = body_x + body_width - 5 - wheel_radius*2
+            else:  # 向左移动
+                # 显示左侧轮子
+                wheel_x = body_x + 5
+            
+            self.canvas.create_oval(
+                wheel_x, wheel_y - wheel_radius,
+                wheel_x + wheel_radius*2, wheel_y + wheel_radius,
+                fill='#333333',  # 黑色
+                outline='#000000',
+                width=2,  # 侧面视角轮子稍微粗一点
+                tags="car"
+            )
         
         # 绘制车窗
         window_width = body_width // 3
@@ -118,6 +144,30 @@ class DesktopPetCar:
             width=1,
             tags="car"
         )
+        
+        # 绘制方向指示器（小箭头）
+        if self.direction != 0:
+            arrow_size = 4
+            if self.direction == 1:  # 向右
+                arrow_points = [
+                    body_x + body_width - 2, body_y + body_height//2,
+                    body_x + body_width - 2 - arrow_size, body_y + body_height//2 - arrow_size,
+                    body_x + body_width - 2 - arrow_size, body_y + body_height//2 + arrow_size
+                ]
+            else:  # 向左
+                arrow_points = [
+                    body_x + 2, body_y + body_height//2,
+                    body_x + 2 + arrow_size, body_y + body_height//2 - arrow_size,
+                    body_x + 2 + arrow_size, body_y + body_height//2 + arrow_size
+                ]
+            
+            self.canvas.create_polygon(
+                arrow_points,
+                fill='#FFFFFF',
+                outline='#333333',
+                width=1,
+                tags="car"
+            )
     
     def create_tray_icon(self):
         """创建系统托盘图标"""
@@ -162,21 +212,30 @@ class DesktopPetCar:
     
     def increase_speed(self, icon, item):
         """增加小车速度"""
-        self.speed = min(10, self.speed + 1)
+        self.speed = min(2.0, self.speed + 0.1)  # 最大速度2.0
     
     def decrease_speed(self, icon, item):
         """减小小车速度"""
-        self.speed = max(1, self.speed - 1)
+        self.speed = max(0.1, self.speed - 0.1)  # 最小速度0.1
     
     def random_position(self, icon, item):
-        """将小车移动到随机位置"""
+        """将小车移动到随机位置（限制在右半边）"""
         screen_width = self.window.winfo_screenwidth()
         screen_height = self.window.winfo_screenheight()
         
-        x = random.randint(0, screen_width - self.car_size)
-        y = random.randint(0, screen_height - self.car_size)
+        # 限制在右半边
+        min_x = screen_width // 2
+        max_x = screen_width - self.car_size
+        x = random.randint(min_x, max_x)
+        
+        # 保持在底部菜单栏区域
+        taskbar_height = 40
+        y = screen_height - taskbar_height - self.car_size
         
         self.window.geometry(f"+{x}+{y}")
+        
+        # 更新位置变量（50-100范围）
+        self.position = 50 + ((x - min_x) / (max_x - min_x)) * 50
     
     def show_about(self, icon, item):
         """显示关于信息"""
@@ -223,44 +282,74 @@ class DesktopPetCar:
         sys.exit(0)
     
     def animate(self):
-        """动画循环 - 让小车在屏幕边缘移动"""
+        """动画循环 - 让小车在屏幕右半边偶尔移动"""
         while self.running:
             try:
-                # 获取屏幕尺寸
-                screen_width = self.window.winfo_screenwidth()
-                screen_height = self.window.winfo_screenheight()
+                current_time = time.time()
                 
-                # 计算新位置 (在屏幕底部边缘移动，模拟菜单栏)
-                taskbar_height = 40  # 假设任务栏高度
-                y_pos = screen_height - taskbar_height - self.car_size
+                # 检查是否应该开始移动（大约每分钟一次）
+                if not self.is_moving and (current_time - self.last_move_time) > self.move_interval:
+                    self.is_moving = True
+                    self.last_move_time = current_time
+                    # 随机决定移动距离和方向
+                    move_duration = random.uniform(5, 15)  # 移动5-15秒
+                    self.move_end_time = current_time + move_duration
+                    
+                    # 在右半边范围内随机选择目标位置 (50-100)
+                    target_position = random.uniform(50, 100)
+                    
+                    # 决定移动方向
+                    if target_position > self.position:
+                        self.direction = 1  # 向右
+                    else:
+                        self.direction = -1  # 向左
+                    
+                    print(f"开始移动: 方向={self.direction}, 目标位置={target_position:.1f}")
                 
-                # 更新水平位置
-                self.position += self.direction * self.speed
-                
-                # 边界检查
-                if self.position <= 0:
-                    self.position = 0
-                    self.direction = 1  # 向右转
-                elif self.position >= 100:
-                    self.position = 100
-                    self.direction = -1  # 向左转
-                
-                # 计算实际x坐标
-                max_x = screen_width - self.car_size
-                x_pos = int(self.position / 100 * max_x)
-                
-                # 更新窗口位置
-                self.window.geometry(f"+{x_pos}+{y_pos}")
-                
-                # 偶尔随机改变方向
-                if random.random() < 0.01:  # 1% 的几率
-                    self.direction *= -1
-                
-                # 重绘小车 (偶尔)
-                if random.random() < 0.05:  # 5% 的几率
+                # 如果正在移动，更新位置
+                if self.is_moving:
+                    # 获取屏幕尺寸
+                    screen_width = self.window.winfo_screenwidth()
+                    screen_height = self.window.winfo_screenheight()
+                    
+                    # 计算新位置 (在屏幕底部边缘移动，模拟菜单栏)
+                    taskbar_height = 40  # 假设任务栏高度
+                    y_pos = screen_height - taskbar_height - self.car_size
+                    
+                    # 更新水平位置（限制在50-100范围内，即右半边）
+                    self.position += self.direction * self.speed
+                    
+                    # 边界检查（限制在右半边）
+                    if self.position < 50:
+                        self.position = 50
+                        self.direction = 1  # 向右转
+                    elif self.position > 100:
+                        self.position = 100
+                        self.direction = -1  # 向左转
+                    
+                    # 检查是否到达移动结束时间
+                    if current_time > self.move_end_time:
+                        self.is_moving = False
+                        self.direction = 0  # 停止移动，显示正面视角
+                        print("停止移动")
+                    
+                    # 计算实际x坐标（只使用右半边屏幕）
+                    max_x = screen_width - self.car_size
+                    # 将50-100的位置映射到屏幕右半边的x坐标
+                    x_pos = int((self.position - 50) / 50 * (max_x / 2) + (max_x / 2))
+                    
+                    # 更新窗口位置
+                    self.window.geometry(f"+{x_pos}+{y_pos}")
+                    
+                    # 重绘小车以更新轮子显示
                     self.window.after(0, self.draw_car)
+                else:
+                    # 不在移动时，确保方向为0（正面视角）
+                    if self.direction != 0:
+                        self.direction = 0
+                        self.window.after(0, self.draw_car)
                 
-                time.sleep(0.05)  # 控制动画速度
+                time.sleep(0.5)  # 降低更新频率，节省资源
                 
             except Exception as e:
                 print(f"动画错误: {e}")
