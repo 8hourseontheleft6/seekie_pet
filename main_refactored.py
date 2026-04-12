@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 桌面宠物机器人 - 重构版
-机器人在菜单栏上移动的轻量级桌面宠物应用
+一个轻量级的桌面宠物应用，机器人在菜单栏上移动
 
 版本: 3.0.1 重构版
-重构目标: 将长函数拆分为小函数，提高可读性
+功能: 只保留核心功能，简化代码结构
 """
 
 import tkinter as tk
@@ -16,18 +16,20 @@ from PIL import Image, ImageDraw, ImageTk
 import pystray
 from pystray import MenuItem as item
 
-# ==================== 配置常量 ====================
-CAR_SIZE = 50
-INITIAL_POSITION = 75
-INITIAL_SPEED = 1.5
-MOVE_INTERVAL = 20
-MIN_SPEED = 0.5
-MAX_SPEED = 5.0
-SPEED_INCREMENT = 0.5
-TASKBAR_HEIGHT = 40
-VERTICAL_OFFSET = -5
-
-class DesktopPetCar:
+class DesktopPet:
+    """桌面宠物机器人 - 重构版"""
+    
+    # 配置常量
+    CAR_SIZE = 50
+    INITIAL_POSITION = 75
+    INITIAL_SPEED = 1.5
+    MOVE_INTERVAL = 20
+    MIN_SPEED = 0.5
+    MAX_SPEED = 5.0
+    SPEED_INCREMENT = 0.5
+    TASKBAR_HEIGHT = 40
+    VERTICAL_OFFSET = -5
+    
     def __init__(self):
         self.window = None
         self.canvas = None
@@ -35,9 +37,9 @@ class DesktopPetCar:
         self.running = True
         
         # 状态变量
-        self.position = INITIAL_POSITION
+        self.position = self.INITIAL_POSITION
         self.direction = 0
-        self.speed = INITIAL_SPEED
+        self.speed = self.INITIAL_SPEED
         self.is_moving = False
         self.move_end_time = 0
         self.last_move_time = time.time()
@@ -47,43 +49,15 @@ class DesktopPetCar:
         self.robot_photo = None
         
         # 初始化
-        self._init_window()
-        self._load_image()
-        self._init_tray()
-        self._start_animation()
+        self._create_window()
+        self._load_robot_image()
+        self._create_tray_icon()
+        
+        # 启动动画线程
+        self.animation_thread = threading.Thread(target=self._animation_loop, daemon=True)
+        self.animation_thread.start()
     
-    # ==================== 初始化方法 ====================
-    
-    def _init_window(self):
-        """初始化透明窗口"""
-        self.window = tk.Tk()
-        self.window.title("桌面宠物机器人")
-        self.window.overrideredirect(True)
-        self.window.attributes('-topmost', True)
-        
-        # 设置透明度
-        try:
-            self.window.attributes('-alpha', 0.99)
-        except:
-            pass
-        
-        # 创建画布
-        self.canvas = tk.Canvas(
-            self.window,
-            width=CAR_SIZE,
-            height=CAR_SIZE,
-            highlightthickness=0,
-            bg='black'
-        )
-        self.canvas.pack()
-        
-        # 设置透明色
-        self.window.attributes('-transparentcolor', 'black')
-        
-        # 设置初始位置
-        self._update_position()
-    
-    def _load_image(self):
+    def _load_robot_image(self):
         """加载机器人图片"""
         try:
             current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -108,15 +82,72 @@ class DesktopPetCar:
     
     def _create_fallback_image(self):
         """创建后备图标"""
-        img = Image.new('RGBA', (CAR_SIZE, CAR_SIZE), (0, 0, 0, 0))
+        img = Image.new('RGBA', (self.CAR_SIZE, self.CAR_SIZE), (0, 0, 0, 0))
         draw = ImageDraw.Draw(img)
         draw.rectangle([10, 10, 40, 40], fill='#4169E1', outline='#1E3A8A', width=2)
         draw.rectangle([15, 15, 25, 25], fill='#FFFFFF', outline='#1E3A8A', width=1)
         draw.rectangle([30, 15, 35, 20], fill='#FF6B6B', outline='#CC5555', width=1)
         return img
     
-    def _init_tray(self):
-        """初始化系统托盘"""
+    def _create_window(self):
+        """创建透明窗口"""
+        self.window = tk.Tk()
+        self.window.title("桌面宠物机器人")
+        self.window.overrideredirect(True)
+        self.window.attributes('-topmost', True)
+        
+        # 设置透明度
+        try:
+            self.window.attributes('-alpha', 0.99)
+        except:
+            pass
+        
+        # 创建画布
+        self.canvas = tk.Canvas(
+            self.window,
+            width=self.CAR_SIZE,
+            height=self.CAR_SIZE,
+            highlightthickness=0,
+            bg='black'
+        )
+        self.canvas.pack()
+        
+        # 设置透明色
+        self.window.attributes('-transparentcolor', 'black')
+        
+        # 设置初始位置
+        self._update_window_position()
+    
+    def _update_window_position(self):
+        """更新窗口位置"""
+        if not self.window:
+            return
+        
+        screen_width = self.window.winfo_screenwidth()
+        screen_height = self.window.winfo_screenheight()
+        
+        # 限制在右半边
+        max_x = screen_width - self.CAR_SIZE
+        x_pos = int((self.position - 50) / 50 * (max_x / 2) + (max_x / 2))
+        y_pos = screen_height - self.TASKBAR_HEIGHT - self.CAR_SIZE + self.VERTICAL_OFFSET
+        
+        self.window.geometry(f"+{x_pos}+{y_pos}")
+    
+    def _draw_robot(self):
+        """绘制机器人"""
+        if not self.canvas or not self.robot_photo:
+            return
+        
+        self.canvas.delete("all")
+        self.canvas.create_image(
+            self.CAR_SIZE // 2,
+            self.CAR_SIZE // 2,
+            image=self.robot_photo,
+            tags="robot"
+        )
+    
+    def _create_tray_icon(self):
+        """创建系统托盘图标"""
         if not self.robot_image:
             tray_image = Image.new('RGB', (64, 64), color='white')
             draw = ImageDraw.Draw(tray_image)
@@ -142,43 +173,6 @@ class DesktopPetCar:
         self.tray_thread = threading.Thread(target=self.icon.run, daemon=True)
         self.tray_thread.start()
     
-    def _start_animation(self):
-        """启动动画线程"""
-        self.animation_thread = threading.Thread(target=self._animation_loop, daemon=True)
-        self.animation_thread.start()
-    
-    # ==================== 核心功能方法 ====================
-    
-    def _update_position(self):
-        """更新窗口位置"""
-        if not self.window:
-            return
-        
-        screen_width = self.window.winfo_screenwidth()
-        screen_height = self.window.winfo_screenheight()
-        
-        # 限制在右半边
-        max_x = screen_width - CAR_SIZE
-        x_pos = int((self.position - 50) / 50 * (max_x / 2) + (max_x / 2))
-        y_pos = screen_height - TASKBAR_HEIGHT - CAR_SIZE + VERTICAL_OFFSET
-        
-        self.window.geometry(f"+{x_pos}+{y_pos}")
-    
-    def _draw_robot(self):
-        """绘制机器人"""
-        if not self.canvas or not self.robot_photo:
-            return
-        
-        self.canvas.delete("all")
-        self.canvas.create_image(
-            CAR_SIZE // 2,
-            CAR_SIZE // 2,
-            image=self.robot_photo,
-            tags="robot"
-        )
-    
-    # ==================== 控制方法 ====================
-    
     def _toggle_visibility(self, icon, item):
         """切换窗口可见性"""
         if self.window.winfo_viewable():
@@ -188,11 +182,11 @@ class DesktopPetCar:
     
     def _increase_speed(self, icon, item):
         """增加速度"""
-        self.speed = min(MAX_SPEED, self.speed + SPEED_INCREMENT)
+        self.speed = min(self.MAX_SPEED, self.speed + self.SPEED_INCREMENT)
     
     def _decrease_speed(self, icon, item):
         """减小速度"""
-        self.speed = max(MIN_SPEED, self.speed - SPEED_INCREMENT)
+        self.speed = max(self.MIN_SPEED, self.speed - self.SPEED_INCREMENT)
     
     def _quit_app(self, icon, item):
         """退出应用"""
@@ -202,8 +196,6 @@ class DesktopPetCar:
         if self.window:
             self.window.quit()
     
-    # ==================== 动画循环方法 ====================
-    
     def _animation_loop(self):
         """动画循环"""
         while self.running:
@@ -211,7 +203,7 @@ class DesktopPetCar:
                 current_time = time.time()
                 
                 # 检查是否应该开始移动
-                if not self.is_moving and (current_time - self.last_move_time) > MOVE_INTERVAL:
+                if not self.is_moving and (current_time - self.last_move_time) > self.MOVE_INTERVAL:
                     self._start_moving(current_time)
                 
                 # 如果正在移动，更新位置
@@ -257,12 +249,10 @@ class DesktopPetCar:
             print("停止移动")
         
         # 更新窗口位置
-        self._update_position()
+        self._update_window_position()
         
         # 重绘机器人
         self.window.after(0, self._draw_robot)
-    
-    # ==================== 公共方法 ====================
     
     def run(self):
         """运行应用"""
@@ -271,17 +261,8 @@ class DesktopPetCar:
         except KeyboardInterrupt:
             self._quit_app(None, None)
 
-# ==================== 主函数 ====================
-
 def main():
     """主函数"""
-    print_header()
-    
-    pet = DesktopPetCar()
-    pet.run()
-
-def print_header():
-    """打印程序头信息"""
     print("=" * 50)
     print("桌面宠物机器人 v3.0.1 重构版")
     print("=" * 50)
@@ -295,6 +276,9 @@ def print_header():
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制机器人")
     print("=" * 50)
+    
+    pet = DesktopPet()
+    pet.run()
 
 if __name__ == "__main__":
     main()
