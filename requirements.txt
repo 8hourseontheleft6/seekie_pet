@@ -1,6 +1,6 @@
-# 桌面宠物小车依赖
+# 桌面宠物机器人依赖
 # 安装命令: pip install -r requirements.txt
 
 pillow>=9.0.0
 pystray>=0.19.0
-tkinter  # 通常Python自带，无需额外安装
+# tkinter 是Python标准库的一部分，无需额外安装
