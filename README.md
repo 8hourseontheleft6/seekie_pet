@@ -78,12 +78,12 @@ desktop_pet_car/
 │   └── Sleep.png             # 睡眠状态图片
 ├── requirements.txt          # 依赖列表
 ├── README.md                 # 说明文档
-├── README_REFACTORED.md      # 重构说明文档
 ├── run.bat                   # Windows运行脚本
 └── .gitignore               # Git忽略配置
 ```
 
 **已删除的文件**:
+- `README_REFACTORED.md` - 旧版本重构说明文档
 - `main_final.py`, `main_with_mouse_detection.py`, `main_with_input_detection.py` - 测试版本文件
 - `main_refactored.py` - 旧的重构版本
 - `create_sleep_image.py` - 睡眠图片创建工具（已使用）
