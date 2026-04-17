@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-桌面宠物机器人 - 最终版
-机器人在菜单栏上移动，检测用户鼠标和键盘活动
+桌面宠物机器人 - 增强版
+机器人在菜单栏上移动，检测用户鼠标和键盘活动，支持快捷键功能
 
-版本: 3.0.4 (输入活动检测版)
-功能: 检测鼠标和键盘活动，10秒无活动则进入睡眠状态
+版本: 3.1.0 (快捷键增强版)
+功能: 检测鼠标和键盘活动，10秒无活动则进入睡眠状态，支持Ctrl+J打开截图软件
 """
 
 import tkinter as tk
@@ -12,10 +12,12 @@ import threading
 import time
 import random
 import os
+import subprocess
 from PIL import Image, ImageDraw, ImageTk
 import pystray
 from pystray import MenuItem as item
 from ctypes import windll, Structure, c_ulong, byref
+import keyboard
 
 # ==================== 配置常量 ====================
 CAR_SIZE = 50
@@ -28,6 +30,9 @@ SPEED_INCREMENT = 0.5
 TASKBAR_HEIGHT = 40
 VERTICAL_OFFSET = -5
 INACTIVITY_THRESHOLD = 10  # 10秒无输入活动进入睡眠
+
+# 快捷键配置
+HOTKEY_SCREENSHOT = "ctrl+j"  # 截图快捷键
 
 class LASTINPUTINFO(Structure):
     _fields_ = [
@@ -67,6 +72,9 @@ class DesktopPetCar:
         
         # 启动线程
         self._start_threads()
+        
+        # 注册快捷键
+        self._register_hotkeys()
     
     # ==================== 初始化方法 ====================
     
@@ -189,9 +197,77 @@ class DesktopPetCar:
         """启动所有线程"""
         self.animation_thread = threading.Thread(target=self._animation_loop, daemon=True)
         self.input_detection_thread = threading.Thread(target=self._input_detection_loop, daemon=True)
+        self.hotkey_thread = threading.Thread(target=self._hotkey_monitor_loop, daemon=True)
         
         self.animation_thread.start()
         self.input_detection_thread.start()
+        self.hotkey_thread.start()
+    
+    # ==================== 快捷键功能方法 ====================
+    
+    def _register_hotkeys(self):
+        """注册全局快捷键"""
+        try:
+            # 注册Ctrl+J截图快捷键
+            keyboard.add_hotkey(HOTKEY_SCREENSHOT, self._take_screenshot)
+            print(f"✓ 快捷键注册成功: {HOTKEY_SCREENSHOT} - 打开截图软件")
+        except Exception as e:
+            print(f"⚠ 快捷键注册失败: {e}")
+    
+    def _take_screenshot(self):
+        """执行截图操作"""
+        try:
+            print("📸 检测到Ctrl+J快捷键，正在打开截图软件...")
+            
+            # 尝试使用Windows自带的截图工具
+            # 方法1: 使用SnippingTool（截图工具）
+            try:
+                subprocess.Popen(["SnippingTool.exe"])
+                print("✓ 已启动Windows截图工具")
+                return
+            except:
+                pass
+            
+            # 方法2: 使用PrintScreen键模拟
+            try:
+                keyboard.press_and_release('print screen')
+                print("✓ 已模拟PrintScreen键")
+                return
+            except:
+                pass
+            
+            # 方法3: 使用Windows截图快捷键Win+Shift+S
+            try:
+                keyboard.press_and_release('windows+shift+s')
+                print("✓ 已触发Windows截图快捷键(Win+Shift+S)")
+                return
+            except:
+                pass
+            
+            # 方法4: 尝试打开画图工具
+            try:
+                subprocess.Popen(["mspaint.exe"])
+                print("✓ 已启动画图工具，请使用Ctrl+V粘贴截图")
+                return
+            except:
+                pass
+            
+            print("⚠ 无法打开截图软件，请确保系统支持截图功能")
+            
+        except Exception as e:
+            print(f"❌ 截图操作失败: {e}")
+    
+    def _hotkey_monitor_loop(self):
+        """快捷键监控循环"""
+        print("启动快捷键监控...")
+        print(f"可用快捷键: {HOTKEY_SCREENSHOT} - 打开截图软件")
+        
+        try:
+            # keyboard库会自动处理热键，这里只需要保持线程运行
+            while self.running:
+                time.sleep(1)
+        except Exception as e:
+            print(f"快捷键监控错误: {e}")
     
     # ==================== 输入活动检测方法 ====================
     
@@ -317,6 +393,13 @@ class DesktopPetCar:
     def _quit_app(self, icon, item):
         """退出应用"""
         self.running = False
+        
+        # 清理快捷键
+        try:
+            keyboard.unhook_all()
+        except:
+            pass
+        
         if self.icon:
             self.icon.stop()
         if self.window:
@@ -411,7 +494,7 @@ def main():
 def print_header():
     """打印程序头信息"""
     print("=" * 50)
-    print("桌面宠物机器人 v3.0.4 (输入活动检测版)")
+    print("桌面宠物机器人 v3.1.0 (快捷键增强版)")
     print("=" * 50)
     print("功能特点:")
     print("- 检测鼠标和键盘活动，10秒无活动进入睡眠")
@@ -419,6 +502,7 @@ def print_header():
     print("- 输入活动后自动唤醒")
     print("- 限制在屏幕右半边移动")
     print("- 大约每20秒移动一次")
+    print(f"- 快捷键支持: {HOTKEY_SCREENSHOT} 打开截图软件")
     print("=" * 50)
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制机器人")

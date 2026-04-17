@@ -3,4 +3,5 @@
 
 pillow>=9.0.0
 pystray>=0.19.0
+keyboard>=0.13.5
 # tkinter 是Python标准库的一部分，无需额外安装
