@@ -41,7 +41,10 @@ class ConfigManager:
                     "move_interval": 20,
                     "move_speed": 1.5,
                     "screenshot_hotkey": "ctrl+j",
-                    "window_title": "Seekie Setup"
+                    "window_title": "Seekie Setup",
+                    "theme": "default",
+                    "robot_color": "#4169E1",
+                    "robot_size": 50
                 }
                 with open(self.config_path, 'w', encoding='utf-8') as f:
                     json.dump(default_config, f, indent=2, ensure_ascii=False)
@@ -52,7 +55,10 @@ class ConfigManager:
                 "move_interval": 20,
                 "move_speed": 1.5,
                 "screenshot_hotkey": "ctrl+j",
-                "window_title": "Seekie Setup"
+                "window_title": "Seekie Setup",
+                "theme": "default",
+                "robot_color": "#4169E1",
+                "robot_size": 50
             }
     
     def get(self, key, default=None):
@@ -288,41 +294,26 @@ class DesktopPetCar:
     def _open_settings_window_thread(self):
         """在新线程中打开设置窗口"""
         try:
-            # 首先尝试使用独立窗口版Web设置窗口
-            try:
-                from web_settings_window import open_web_settings_window
-                if open_web_settings_window():
-                    print("✓ 独立窗口版设置窗口已打开")
-                    return
-                else:
-                    print("⚠ 独立窗口版设置窗口打开失败，尝试其他方式")
-            except ImportError as e:
-                print(f"导入独立窗口版设置窗口失败: {e}")
+            # 动态导入Web设置窗口模块
+            import sys
+            import os
             
-            # 如果独立窗口版失败，尝试使用浏览器版Web设置窗口
-            try:
-                import sys
-                import os
+            # 添加Web设置窗口目录到Python路径
+            web_settings_dir = os.path.join(os.path.dirname(__file__), '..', 'seekie-settings-electron')
+            if os.path.exists(web_settings_dir):
+                sys.path.insert(0, web_settings_dir)
                 
-                # 添加Web设置窗口目录到Python路径
-                web_settings_dir = os.path.join(os.path.dirname(__file__), '..', 'seekie-settings-electron')
-                if os.path.exists(web_settings_dir):
-                    sys.path.insert(0, web_settings_dir)
-                    
-                    try:
-                        from web_settings import open_web_settings
-                        open_web_settings()
-                        print("✓ 浏览器版Web设置窗口已打开")
-                        return
-                    except ImportError as e:
-                        print(f"导入浏览器版Web设置窗口失败: {e}")
-                else:
-                    print(f"Web设置窗口目录不存在: {web_settings_dir}")
-            except Exception as e:
-                print(f"浏览器版Web设置窗口失败: {e}")
-            
-            # 如果Web设置窗口都失败，回退到现代化设置窗口
-            self._fallback_to_modern_settings()
+                try:
+                    from web_settings import open_web_settings
+                    open_web_settings()
+                    print("✓ Web设置窗口已打开")
+                except ImportError as e:
+                    print(f"导入Web设置窗口失败: {e}")
+                    # 回退到现代化设置窗口
+                    self._fallback_to_modern_settings()
+            else:
+                print(f"Web设置窗口目录不存在: {web_settings_dir}")
+                self._fallback_to_modern_settings()
                 
         except Exception as e:
             print(f"打开设置窗口线程失败: {e}")
