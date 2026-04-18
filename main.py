@@ -3,8 +3,8 @@
 桌面宠物机器人 - 增强版
 机器人在菜单栏上移动，检测用户鼠标和键盘活动，支持快捷键功能
 
-版本: 3.1.0 (快捷键增强版)
-功能: 检测鼠标和键盘活动，10秒无活动则进入睡眠状态，支持Ctrl+J打开截图软件
+版本: 3.2.0 (设置窗口版)
+功能: 检测鼠标和键盘活动，10秒无活动则进入睡眠状态，支持Ctrl+J打开截图软件，提供设置窗口
 """
 
 import tkinter as tk
@@ -13,26 +13,75 @@ import time
 import random
 import os
 import subprocess
+import json
 from PIL import Image, ImageDraw, ImageTk
 import pystray
 from pystray import MenuItem as item
 from ctypes import windll, Structure, c_ulong, byref
 import keyboard
 
+# ==================== 配置管理 ====================
+
+class ConfigManager:
+    """配置文件管理器"""
+    
+    def __init__(self, config_path="config.json"):
+        self.config_path = config_path
+        self.config = self.load_config()
+    
+    def load_config(self):
+        """加载配置文件"""
+        try:
+            if os.path.exists(self.config_path):
+                with open(self.config_path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            else:
+                # 创建默认配置
+                default_config = {
+                    "move_interval": 20,
+                    "move_speed": 1.5,
+                    "screenshot_hotkey": "ctrl+j",
+                    "window_title": "Seekie Setup"
+                }
+                with open(self.config_path, 'w', encoding='utf-8') as f:
+                    json.dump(default_config, f, indent=2, ensure_ascii=False)
+                return default_config
+        except Exception as e:
+            print(f"加载配置文件失败: {e}")
+            return {
+                "move_interval": 20,
+                "move_speed": 1.5,
+                "screenshot_hotkey": "ctrl+j",
+                "window_title": "Seekie Setup"
+            }
+    
+    def get(self, key, default=None):
+        """获取配置值"""
+        return self.config.get(key, default)
+    
+    def update_from_file(self):
+        """从文件更新配置"""
+        self.config = self.load_config()
+
 # ==================== 配置常量 ====================
 CAR_SIZE = 50
 INITIAL_POSITION = 75
-INITIAL_SPEED = 1.5
-MOVE_INTERVAL = 20
-MIN_SPEED = 0.5
-MAX_SPEED = 5.0
-SPEED_INCREMENT = 0.5
 TASKBAR_HEIGHT = 40
 VERTICAL_OFFSET = -5
 INACTIVITY_THRESHOLD = 10  # 10秒无输入活动进入睡眠
 
+# 配置管理器实例
+config_manager = ConfigManager()
+
+# 从配置文件读取设置
+MOVE_INTERVAL = config_manager.get("move_interval", 20)
+INITIAL_SPEED = config_manager.get("move_speed", 1.5)
+MIN_SPEED = 0.5
+MAX_SPEED = 5.0
+SPEED_INCREMENT = 0.5
+
 # 快捷键配置
-HOTKEY_SCREENSHOT = "ctrl+j"  # 截图快捷键
+HOTKEY_SCREENSHOT = config_manager.get("screenshot_hotkey", "ctrl+j")  # 截图快捷键
 
 class LASTINPUTINFO(Structure):
     _fields_ = [
@@ -46,11 +95,12 @@ class DesktopPetCar:
         self.canvas = None
         self.icon = None
         self.running = True
+        self.config_manager = config_manager
         
         # 状态变量
         self.position = INITIAL_POSITION
         self.direction = 0
-        self.speed = INITIAL_SPEED
+        self.speed = self.config_manager.get("move_speed", INITIAL_SPEED)
         self.is_moving = False
         self.move_end_time = 0
         self.last_move_time = time.time()
@@ -58,6 +108,10 @@ class DesktopPetCar:
         # 输入活动检测
         self.last_input_time = self._get_last_input_time()
         self.is_sleeping = False
+        
+        # 动态配置
+        self.move_interval = self.config_manager.get("move_interval", MOVE_INTERVAL)
+        self.hotkey_screenshot = self.config_manager.get("screenshot_hotkey", HOTKEY_SCREENSHOT)
         
         # 图片资源
         self.robot_image = None
@@ -75,6 +129,9 @@ class DesktopPetCar:
         
         # 注册快捷键
         self._register_hotkeys()
+        
+        # 设置窗口引用
+        self.settings_window = None
     
     # ==================== 初始化方法 ====================
     
@@ -175,18 +232,22 @@ class DesktopPetCar:
         else:
             tray_image = self.robot_image.resize((64, 64), Image.Resampling.LANCZOS)
         
-        # 简化菜单
+        # 增强菜单（添加设置选项）
         menu = (
             item('显示/隐藏', self._toggle_visibility),
             item('速度加快', self._increase_speed),
             item('速度减慢', self._decrease_speed),
+            item('---', None),  # 分隔线
+            item('打开设置', self._open_settings),
+            item('重新加载配置', self._reload_config),
+            item('---', None),  # 分隔线
             item('退出', self._quit_app)
         )
         
         self.icon = pystray.Icon(
             "desktop_pet_robot",
             tray_image,
-            "桌面宠物机器人 (输入检测版)",
+            "桌面宠物机器人 (设置窗口版)",
             menu
         )
         
@@ -203,21 +264,80 @@ class DesktopPetCar:
         self.input_detection_thread.start()
         self.hotkey_thread.start()
     
+    # ==================== 设置窗口方法 ====================
+    
+    def _open_settings(self, icon=None, item=None):
+        """打开设置窗口"""
+        try:
+            # 避免重复打开多个设置窗口
+            if hasattr(self, 'settings_window') and self.settings_window:
+                try:
+                    # 尝试将现有窗口提到前面
+                    self.settings_window.window.lift()
+                    self.settings_window.window.focus_force()
+                    return
+                except:
+                    pass
+            
+            # 在新线程中打开设置窗口，避免阻塞主线程
+            settings_thread = threading.Thread(target=self._open_settings_window_thread, daemon=True)
+            settings_thread.start()
+        except Exception as e:
+            print(f"打开设置窗口失败: {e}")
+    
+    def _open_settings_window_thread(self):
+        """在新线程中打开设置窗口"""
+        try:
+            # 动态导入设置窗口模块
+            from settings_window import SeekieSetup
+            
+            self.settings_window = SeekieSetup()
+            self.settings_window.run()
+            self.settings_window = None  # 窗口关闭后清除引用
+        except Exception as e:
+            print(f"打开设置窗口线程失败: {e}")
+            import traceback
+            traceback.print_exc()
+    
+    def _reload_config(self, icon=None, item=None):
+        """重新加载配置文件"""
+        try:
+            self.config_manager.update_from_file()
+            
+            # 更新动态配置
+            self.move_interval = self.config_manager.get("move_interval", MOVE_INTERVAL)
+            self.hotkey_screenshot = self.config_manager.get("screenshot_hotkey", HOTKEY_SCREENSHOT)
+            
+            # 重新注册快捷键
+            try:
+                keyboard.unhook_all()
+                self._register_hotkeys()
+            except:
+                pass
+            
+            print("✓ 配置文件已重新加载")
+            print(f"  运动间隔: {self.move_interval}秒")
+            print(f"  运动速度: {self.speed}")
+            print(f"  截图快捷键: {self.hotkey_screenshot}")
+            
+        except Exception as e:
+            print(f"重新加载配置失败: {e}")
+    
     # ==================== 快捷键功能方法 ====================
     
     def _register_hotkeys(self):
         """注册全局快捷键"""
         try:
-            # 注册Ctrl+J截图快捷键
-            keyboard.add_hotkey(HOTKEY_SCREENSHOT, self._take_screenshot)
-            print(f"✓ 快捷键注册成功: {HOTKEY_SCREENSHOT} - 打开截图软件")
+            # 注册截图快捷键（从配置读取）
+            keyboard.add_hotkey(self.hotkey_screenshot, self._take_screenshot)
+            print(f"✓ 快捷键注册成功: {self.hotkey_screenshot} - 打开截图软件")
         except Exception as e:
             print(f"⚠ 快捷键注册失败: {e}")
     
     def _take_screenshot(self):
         """执行截图操作"""
         try:
-            print("📸 检测到Ctrl+J快捷键，正在打开截图软件...")
+            print(f"📸 检测到{self.hotkey_screenshot}快捷键，正在打开截图软件...")
             
             # 尝试使用Windows自带的截图工具
             # 方法1: 使用SnippingTool（截图工具）
@@ -260,7 +380,7 @@ class DesktopPetCar:
     def _hotkey_monitor_loop(self):
         """快捷键监控循环"""
         print("启动快捷键监控...")
-        print(f"可用快捷键: {HOTKEY_SCREENSHOT} - 打开截图软件")
+        print(f"可用快捷键: {self.hotkey_screenshot} - 打开截图软件")
         
         try:
             # keyboard库会自动处理热键，这里只需要保持线程运行
@@ -415,8 +535,8 @@ class DesktopPetCar:
                 
                 # 只有在非睡眠状态时才检查移动
                 if not self.is_sleeping:
-                    # 检查是否应该开始移动
-                    if not self.is_moving and (current_time - self.last_move_time) > MOVE_INTERVAL:
+                    # 检查是否应该开始移动（使用动态配置）
+                    if not self.is_moving and (current_time - self.last_move_time) > self.move_interval:
                         self._start_moving(current_time)
                     
                     # 如果正在移动，更新位置
@@ -494,15 +614,16 @@ def main():
 def print_header():
     """打印程序头信息"""
     print("=" * 50)
-    print("桌面宠物机器人 v3.1.0 (快捷键增强版)")
+    print("桌面宠物机器人 v3.2.0 (设置窗口版)")
     print("=" * 50)
     print("功能特点:")
     print("- 检测鼠标和键盘活动，10秒无活动进入睡眠")
     print("- 睡眠状态下显示Sleep.png图片")
     print("- 输入活动后自动唤醒")
     print("- 限制在屏幕右半边移动")
-    print("- 大约每20秒移动一次")
-    print(f"- 快捷键支持: {HOTKEY_SCREENSHOT} 打开截图软件")
+    print(f"- 大约每{config_manager.get('move_interval', 20)}秒移动一次")
+    print(f"- 快捷键支持: {config_manager.get('screenshot_hotkey', 'ctrl+j')} 打开截图软件")
+    print("- 提供设置窗口，可自定义运动间隔、速度和快捷键")
     print("=" * 50)
     print("应用将在系统托盘中运行")
     print("右键点击托盘图标可以控制机器人")
