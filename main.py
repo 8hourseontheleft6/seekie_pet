@@ -288,16 +288,50 @@ class DesktopPetCar:
     def _open_settings_window_thread(self):
         """在新线程中打开设置窗口"""
         try:
-            # 动态导入设置窗口模块
-            from settings_window import SeekieSetup
+            # 动态导入Web设置窗口模块
+            import sys
+            import os
             
-            self.settings_window = SeekieSetup()
-            self.settings_window.run()
-            self.settings_window = None  # 窗口关闭后清除引用
+            # 添加Web设置窗口目录到Python路径
+            web_settings_dir = os.path.join(os.path.dirname(__file__), '..', 'seekie-settings-electron')
+            if os.path.exists(web_settings_dir):
+                sys.path.insert(0, web_settings_dir)
+                
+                try:
+                    from web_settings import open_web_settings
+                    open_web_settings()
+                    print("✓ Web设置窗口已打开")
+                except ImportError as e:
+                    print(f"导入Web设置窗口失败: {e}")
+                    # 回退到现代化设置窗口
+                    self._fallback_to_modern_settings()
+            else:
+                print(f"Web设置窗口目录不存在: {web_settings_dir}")
+                self._fallback_to_modern_settings()
+                
         except Exception as e:
             print(f"打开设置窗口线程失败: {e}")
             import traceback
             traceback.print_exc()
+            self._fallback_to_modern_settings()
+    
+    def _fallback_to_modern_settings(self):
+        """回退到现代化设置窗口"""
+        try:
+            print("尝试使用现代化设置窗口...")
+            from settings_window_v2 import open_modern_settings_window
+            open_modern_settings_window()
+        except Exception as e:
+            print(f"现代化设置窗口失败: {e}")
+            # 最后尝试使用旧版窗口
+            try:
+                print("尝试使用旧版设置窗口...")
+                from settings_window import SeekieSetup
+                self.settings_window = SeekieSetup()
+                self.settings_window.run()
+                self.settings_window = None
+            except Exception as e2:
+                print(f"所有设置窗口都失败: {e2}")
     
     def _reload_config(self, icon=None, item=None):
         """重新加载配置文件"""

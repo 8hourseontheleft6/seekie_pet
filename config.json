@@ -1,6 +1,6 @@
 {
-  "move_interval": 20,
-  "move_speed": 1.5,
+  "move_interval": 33,
+  "move_speed": 3.8,
   "screenshot_hotkey": "ctrl+j",
   "window_title": "Seekie Setup"
 }
