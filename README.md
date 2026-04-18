@@ -1,11 +1,11 @@
-# 桌面宠物机器人 v3.2.0
+# Seekie Pet v3.3.0
 
 一个轻量级的桌面宠物应用，显示一个机器人在菜单栏区域移动，支持快捷键功能和设置窗口。
 
-**版本: 3.2.0**  
+**版本: 3.3.0**  
 **最后更新: 2026-04-18**
 
-## 🎉 设置窗口版 (v3.2.0)
+## 🎉 Web设置窗口版 (v3.3.0)
 
 - 🖱️ **输入检测**: 检测鼠标和键盘活动
 - 😴 **睡眠模式**: 10秒无输入活动进入睡眠状态
@@ -16,7 +16,7 @@
 - ⚙️ **设置窗口**: 提供图形化设置界面，可自定义运动间隔、速度和快捷键
 - 📁 **配置管理**: 设置保存到配置文件，支持热重载
 
-## 功能特点 (v3.2.0)
+## 功能特点 (v3.3.0)
 
 - 🤖 **智能机器人**: 使用Robot.png图片作为桌面宠物
 - 🚀 **流畅动画**: 20FPS高帧率，无卡顿感
@@ -78,11 +78,11 @@
    - **Ctrl+J**: 快速打开截图软件
    - 支持多种截图方式：Windows截图工具、PrintScreen键、Win+Shift+S快捷键、画图工具
 
-## 项目结构 (v3.2.0)
+## 项目结构 (v3.3.0)
 
 ```
-desktop_pet_car/
-├── main.py                   # 主程序文件（版本3.2.0设置窗口版）
+seekie_pet/
+├── main.py                   # 主程序文件（版本3.3.0 Web设置窗口版）
 ├── settings_window.py        # 设置窗口程序（Seekie Setup）
 ├── config.json               # 配置文件（保存所有设置）
 ├── main_pic/
@@ -300,8 +300,12 @@ desktop_pet_car/
 
 ## 在线仓库
 
-本项目已推送到Gitee：  
-[https://gitee.com/NGC2237-Albus/desktop_pet_car](https://gitee.com/NGC2237-Albus/desktop_pet_car)
+本项目已推送到多个平台：
+
+- **GitHub**: [https://github.com/8hourseontheleft6/desktop_pet_car](https://github.com/8hourseontheleft6/desktop_pet_car)
+- **Gitee**: [https://gitee.com/NGC2237-Albus/desktop_pet_car](https://gitee.com/NGC2237-Albus/desktop_pet_car)
+
+**注意**: 项目名称已从"桌面宠物机器人"更名为"Seekie Pet"，仓库名称将在后续更新中同步更改。
 
 ## 许可证
 
