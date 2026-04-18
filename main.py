@@ -299,7 +299,7 @@ class DesktopPetCar:
             import os
             
             # 添加Web设置窗口目录到Python路径
-            web_settings_dir = os.path.join(os.path.dirname(__file__), '..', 'seekie-settings-electron')
+            web_settings_dir = os.path.join(os.path.dirname(__file__), 'web_settings')
             if os.path.exists(web_settings_dir):
                 sys.path.insert(0, web_settings_dir)
                 
