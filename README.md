@@ -1,11 +1,11 @@
-# Seekie Pet v3.3.0
+# Seekie Pet v3.2.0
 
 一个轻量级的桌面宠物应用，显示一个机器人在菜单栏区域移动，支持快捷键功能和设置窗口。
 
-**版本: 3.3.0**  
+**版本: 3.2.0**  
 **最后更新: 2026-04-18**
 
-## 🎉 Web设置窗口版 (v3.3.0)
+## 🎉 Web设置窗口版 (v3.2.0)
 
 - 🖱️ **输入检测**: 检测鼠标和键盘活动
 - 😴 **睡眠模式**: 10秒无输入活动进入睡眠状态
@@ -16,7 +16,7 @@
 - ⚙️ **设置窗口**: 提供图形化设置界面，可自定义运动间隔、速度和快捷键
 - 📁 **配置管理**: 设置保存到配置文件，支持热重载
 
-## 功能特点 (v3.3.0)
+## 功能特点 (v3.2.0)
 
 - 🤖 **智能机器人**: 使用Robot.png图片作为桌面宠物
 - 🚀 **流畅动画**: 20FPS高帧率，无卡顿感
@@ -78,17 +78,21 @@
    - **Ctrl+J**: 快速打开截图软件
    - 支持多种截图方式：Windows截图工具、PrintScreen键、Win+Shift+S快捷键、画图工具
 
-## 项目结构 (v3.3.0)
+## 项目结构 (v3.2.0)
 
 ```
 seekie_pet/
-├── main.py                   # 主程序文件（版本3.3.0 Web设置窗口版）
-├── settings_window.py        # 设置窗口程序（Seekie Setup）
+├── main.py                   # 主程序文件（版本3.2.0 Web设置窗口版）
+├── settings_window_v2.py     # 现代化设置窗口程序（备用）
 ├── config.json               # 配置文件（保存所有设置）
 ├── main_pic/
 │   ├── Robot_50x50.png       # 实际使用的50x50像素机器人图片
-│   └── Sleep.png             # 睡眠状态图片
-├── requirements.txt          # 依赖列表（包含keyboard库）
+│   ├── Sleep.png             # 睡眠状态图片
+│   └── robot-icon.png        # 从其他项目整合的图标
+├── web_settings/             # Web设置窗口
+│   ├── web_settings.py       # Flask后端程序
+│   └── templates/index.html  # 前端HTML界面
+├── requirements.txt          # 依赖列表（包含keyboard和flask库）
 ├── README.md                 # 说明文档
 ├── run.bat                   # Windows运行脚本
 └── .gitignore               # Git忽略配置
@@ -302,10 +306,10 @@ seekie_pet/
 
 本项目已推送到多个平台：
 
-- **GitHub**: [https://github.com/8hourseontheleft6/desktop_pet_car](https://github.com/8hourseontheleft6/desktop_pet_car)
-- **Gitee**: [https://gitee.com/NGC2237-Albus/desktop_pet_car](https://gitee.com/NGC2237-Albus/desktop_pet_car)
+- **GitHub**: [https://github.com/8hourseontheleft6/seekie_pet](https://github.com/8hourseontheleft6/seekie_pet)
+- **Gitee**: [https://gitee.com/NGC2237-Albus/seekie_pet](https://gitee.com/NGC2237-Albus/seekie_pet)
 
-**注意**: 项目名称已从"桌面宠物机器人"更名为"Seekie Pet"，仓库名称将在后续更新中同步更改。
+**注意**: 项目名称已从"桌面宠物机器人"更名为"Seekie Pet"，本地文件夹和在线仓库均已同步更新。
 
 ## 许可证
 

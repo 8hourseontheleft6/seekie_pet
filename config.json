@@ -1,7 +1,7 @@
 {
   "move_interval": 33,
   "move_speed": 3.8,
-  "screenshot_hotkey": "ctrl+j",
+  "screenshot_hotkey": "shift+f1",
   "window_title": "Seekie Setup",
-  "theme": "lemon-yellow"
+  "theme": "default"
 }
