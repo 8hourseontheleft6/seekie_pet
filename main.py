@@ -569,9 +569,17 @@ class DesktopPetCar:
     
     def _animation_loop(self):
         """动画循环"""
+        config_check_counter = 0
+        
         while self.running:
             try:
                 current_time = time.time()
+                
+                # 定期检查配置更新（每5秒检查一次）
+                config_check_counter += 1
+                if config_check_counter >= 100:  # 100 * 0.05 = 5秒
+                    self._check_config_update()
+                    config_check_counter = 0
                 
                 # 只有在非睡眠状态时才检查移动
                 if not self.is_sleeping:
@@ -607,6 +615,42 @@ class DesktopPetCar:
         self.direction = 1 if target > self.position else -1
         
         print(f"开始移动: 方向={self.direction}, 目标={target:.1f}")
+    
+    def _check_config_update(self):
+        """检查并应用配置更新"""
+        try:
+            # 重新加载配置文件
+            self.config_manager.update_from_file()
+            
+            # 获取新配置值
+            new_move_interval = self.config_manager.get("move_interval", MOVE_INTERVAL)
+            new_speed = self.config_manager.get("move_speed", INITIAL_SPEED)
+            new_hotkey = self.config_manager.get("screenshot_hotkey", HOTKEY_SCREENSHOT)
+            
+            # 检查运动间隔是否有变化
+            if new_move_interval != self.move_interval:
+                self.move_interval = new_move_interval
+                print(f"✓ 运动间隔已更新: {self.move_interval}秒")
+            
+            # 检查运动速度是否有变化
+            if new_speed != self.speed:
+                self.speed = new_speed
+                print(f"✓ 运动速度已更新: {self.speed}")
+            
+            # 检查快捷键是否有变化
+            if new_hotkey != self.hotkey_screenshot:
+                self.hotkey_screenshot = new_hotkey
+                print(f"✓ 截图快捷键已更新: {self.hotkey_screenshot}")
+                
+                # 重新注册快捷键
+                try:
+                    keyboard.unhook_all()
+                    self._register_hotkeys()
+                except Exception as e:
+                    print(f"⚠ 重新注册快捷键失败: {e}")
+                    
+        except Exception as e:
+            print(f"检查配置更新失败: {e}")
     
     def _update_movement(self, current_time):
         """更新移动"""
