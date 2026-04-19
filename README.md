@@ -1,8 +1,8 @@
-# Seekie Pet v3.3.0
+# Seekie Pet v3.3.1
 
 一个轻量级的桌面宠物应用，显示一个机器人在菜单栏区域移动，支持快捷键功能和设置窗口。
 
-**版本: 3.3.0**  
+**版本: 3.3.1**  
 **最后更新: 2026-04-19**
 
 ## 🚀 新增功能 (v3.3.0)
@@ -95,40 +95,36 @@
    - **Ctrl+J**: 快速打开截图软件
    - 支持多种截图方式：Windows截图工具、PrintScreen键、Win+Shift+S快捷键、画图工具
 
-## 项目结构 (v3.3.0)
+## 项目结构 (v3.3.1)
 
-### 重构版项目结构
 ```
 seekie_pet/
-├── main_refactored.py        # 重构版主程序（模块化架构）
-├── main.py                   # 原版主程序（版本3.2.0 Web设置窗口版）
+├── main.py                   # 主程序文件（模块化重构版，修复所有问题）
 ├── settings_window_v2.py     # 现代化设置窗口程序（备用）
 ├── config.json               # 配置文件（保存所有设置）
 ├── improvement_plan.md       # 项目改进计划
-├── run_refactored.bat        # 重构版启动脚本
-├── run.bat                   # 原版启动脚本
-│
-├── core/                     # 核心模块
-│   ├── __init__.py
-│   └── (未来扩展)
+├── improvement_summary.md    # 改进总结
+├── USAGE.md                  # 使用指南
+├── run.bat                   # 智能启动器（可选择版本）
+├── run_refactored.bat        # 重构版专用启动器
 │
 ├── config/                   # 配置管理模块
-│   ├── __init__.py
 │   └── config_manager.py     # 增强版配置管理器
 │
 ├── utils/                    # 工具模块
-│   ├── __init__.py
 │   ├── logger.py            # 增强日志系统
 │   └── image_loader.py      # 智能图片加载器
 │
-├── ui/                       # 用户界面模块
-│   ├── __init__.py
-│   └── (未来扩展)
+├── tests/                    # 测试文件目录
+│   ├── test_movement_only.py
+│   ├── test_new_movement.py
+│   ├── test_settings.py
+│   └── ... (共16个测试文件)
 │
 ├── main_pic/                 # 图片资源
 │   ├── Robot_50x50.png      # 实际使用的50x50像素机器人图片
 │   ├── Sleep.png            # 睡眠状态图片
-│   └── robot-icon.png       # 从其他项目整合的图标
+│   └── robot-icon.png       # 托盘图标
 │
 ├── web_settings/             # Web设置窗口
 │   ├── web_settings.py      # Flask后端程序
@@ -142,35 +138,26 @@ seekie_pet/
 └── .gitignore              # Git忽略配置
 ```
 
-### 原版项目结构 (v3.2.0)
-```
-seekie_pet/
-├── main.py                   # 主程序文件（版本3.2.0 Web设置窗口版）
-├── settings_window_v2.py     # 现代化设置窗口程序（备用）
-├── config.json               # 配置文件（保存所有设置）
-├── main_pic/
-│   ├── Robot_50x50.png       # 实际使用的50x50像素机器人图片
-│   ├── Sleep.png             # 睡眠状态图片
-│   └── robot-icon.png        # 从其他项目整合的图标
-├── web_settings/             # Web设置窗口
-│   ├── web_settings.py       # Flask后端程序
-│   └── templates/index.html  # 前端HTML界面
-├── requirements.txt          # 依赖列表（包含keyboard和flask库）
-├── README.md                 # 说明文档
-├── run.bat                   # Windows运行脚本
-└── .gitignore               # Git忽略配置
-```
-
 **已删除的文件**:
+- `main_refactored.py` - 已重命名为main.py
 - `README_REFACTORED.md` - 旧版本重构说明文档
 - `main_final.py`, `main_with_mouse_detection.py`, `main_with_input_detection.py` - 测试版本文件
-- `main_refactored.py` - 旧的重构版本
 - `create_sleep_image.py` - 睡眠图片创建工具（已使用）
 - `process_image.py`, `process_image_auto.py`, `clean_image_edges.py` - 图片处理工具
 - `test_basic.py`, `test_new_features.py` - 测试文件
 - `Robot_100x100.png` - 冗余图片资源
 
 ## 版本历史
+
+### v3.3.1 (2026-04-19) - 修复所有问题版
+- **问题修复**: 修复所有用户反馈的问题
+- **设置功能**: 修复Web设置窗口正常打开问题
+- **托盘程序**: 修复托盘图标使用robot-icon.png，解决只能打开一次的问题
+- **运动逻辑**: 修复运动逻辑，机器人运动到指定地点后停止，等待10秒再开始新运动
+- **线程安全**: 修复`main thread is not in main loop`线程错误
+- **代码优化**: 删除旧版main.py，只保留重构版main.py
+- **测试规整**: 将所有测试文件移动到tests/文件夹
+- **版本更新**: 更新版本号为3.3.1
 
 ### v3.3.0 (2026-04-18) - Web设置窗口版
 - **Web设置窗口**: 添加基于Flask的现代化Web设置窗口，类似洛雪音乐桌面客户端风格
