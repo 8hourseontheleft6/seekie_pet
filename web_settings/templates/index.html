@@ -474,7 +474,7 @@
             </div>
             
             <div class="version">
-                v3.2.0 • 设置窗口版
+                v3.3.1 • 设置窗口版
             </div>
         </div>
         
@@ -665,7 +665,7 @@
                         <div>
                             <h4 style="margin-bottom: 10px; color: var(--text-primary);">版本信息</h4>
                             <p style="color: var(--text-secondary);">
-                                <strong>版本:</strong> 3.2.0 (设置窗口版)<br>
+                                <strong>版本:</strong> 3.3.1 (修复所有问题版)<br>
                                 <strong>作者:</strong> DeepSeek AI (NGC2237-Albus辅助)<br>
                                 <strong>许可证:</strong> 仅供学习和娱乐使用
                             </p>
@@ -706,16 +706,16 @@
                 const response = await fetch('/api/config');
                 const config = await response.json();
                 
-                // 更新滑块和输入框
-                document.getElementById('moveInterval').value = config.move_interval || 20;
-                document.getElementById('moveSpeed').value = config.move_speed || 1.5;
-                document.getElementById('hotkeyInput').value = config.screenshot_hotkey || 'ctrl+j';
+                // 更新滑块和输入框（新的配置结构）
+                document.getElementById('moveInterval').value = config.robot?.move_interval || 20;
+                document.getElementById('moveSpeed').value = config.robot?.move_speed || 1.5;
+                document.getElementById('hotkeyInput').value = config.hotkeys?.screenshot || 'ctrl+j';
                 
                 // 更新显示值
                 updateSliderValues();
                 
                 // 加载并应用保存的主题
-                const savedTheme = config.theme || 'lemon-yellow';
+                const savedTheme = config.appearance?.theme || 'lemon-yellow';
                 applyTheme(savedTheme);
             } catch (error) {
                 showMessage('加载配置失败: ' + error.message, 'error');
