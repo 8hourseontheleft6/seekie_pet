@@ -3,7 +3,7 @@
 桌面宠物机器人 - 重构版
 使用模块化结构，增强错误处理和配置管理
 
-版本: 3.3.1 (模块化重构版 - 修复所有问题)
+版本: 3.3.2 (模块化重构版 - 修复所有问题)
 """
 
 import sys
@@ -585,10 +585,27 @@ class DesktopPetRobot:
             # 验证配置
             self.config_manager.validate()
             
+            # 应用配置更新到当前实例
+            self._apply_config_updates()
+            
             debug("配置检查完成")
             
         except Exception as e:
             error(f"检查配置更新失败: {e}")
+    
+    def _apply_config_updates(self):
+        """应用配置更新到当前实例"""
+        try:
+            # 更新速度
+            self.speed = self.config.robot.move_speed
+            
+            # 更新其他配置
+            # 这里可以添加其他需要动态更新的配置项
+            
+            debug(f"配置已应用: 速度={self.speed}")
+            
+        except Exception as e:
+            error(f"应用配置更新失败: {e}")
     
     def _update_movement(self, current_time):
         """更新移动"""
@@ -668,7 +685,7 @@ def print_header():
     config = get_config()
     
     print("=" * 50)
-    print("桌面宠物机器人 v3.3.1 (模块化重构版 - 修复所有问题)")
+    print("桌面宠物机器人 v3.3.2 (模块化重构版 - 修复所有问题)")
     print("=" * 50)
     print("功能特点:")
     print("- 模块化结构，代码更清晰")

@@ -42,7 +42,7 @@ class HotkeyConfig:
 @dataclass
 class AppearanceConfig:
     """外观配置"""
-    theme: Theme = Theme.LEMON_YELLOW
+    theme: Theme = Theme.DARK_MODE  # 默认主题改为深蓝色
     transparency: float = 0.99  # 窗口透明度
     always_on_top: bool = True  # 始终置顶
     show_sleep_indicator: bool = True  # 显示睡眠指示器
@@ -192,7 +192,7 @@ class ConfigManager:
                     'decrease_speed': ''
                 },
                 'appearance': {
-                    'theme': data.get('theme', 'lemon-yellow'),
+                    'theme': data.get('theme', 'dark-mode'),  # 默认主题改为深蓝色
                     'transparency': 0.99,
                     'always_on_top': True,
                     'show_sleep_indicator': True
