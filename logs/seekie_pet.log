@@ -1,0 +1,584 @@
+2026-04-19 14:02:10 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 14:02:10 - seekie_pet - INFO - 机器人图片加载成功
+2026-04-19 14:02:10 - seekie_pet - INFO - 睡眠图片加载成功
+2026-04-19 14:02:10 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 14:02:10 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 14:02:10 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 14:02:10 - seekie_pet - INFO - 线程启动完成
+2026-04-19 14:02:10 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 14:02:10 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 14:02:10 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-19 14:02:10 - seekie_pet - ERROR - 应用运行错误: Calling Tcl from different apartment
+2026-04-19 14:02:10 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:02:11 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 14:02:11 - seekie_pet - INFO - 应用已退出
+2026-04-19 14:02:15 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:02:15 - seekie_pet - INFO - 应用已退出
+2026-04-19 14:07:49 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 14:07:49 - seekie_pet - INFO - 机器人图片加载成功
+2026-04-19 14:07:49 - seekie_pet - INFO - 睡眠图片加载成功
+2026-04-19 14:07:49 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 14:07:49 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 14:07:49 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 14:07:49 - seekie_pet - INFO - 线程启动完成
+2026-04-19 14:07:49 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 14:07:49 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 14:07:49 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-19 14:07:49 - seekie_pet - ERROR - 应用运行错误: Calling Tcl from different apartment
+2026-04-19 14:07:49 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:07:50 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 14:07:50 - seekie_pet - INFO - 应用已退出
+2026-04-19 14:07:52 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:07:52 - seekie_pet - INFO - 应用已退出
+2026-04-19 14:10:27 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 14:10:27 - seekie_pet - INFO - 机器人图片加载成功
+2026-04-19 14:10:27 - seekie_pet - INFO - 睡眠图片加载成功
+2026-04-19 14:10:27 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 14:10:27 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 14:10:27 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 14:10:27 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 14:10:27 - seekie_pet - INFO - 线程启动完成
+2026-04-19 14:10:27 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 14:10:27 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-19 14:10:27 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 14:49:41 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 14:49:41 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 14:49:41 - seekie_pet - INFO - ✓ 机器人图片加载成功
+2026-04-19 14:49:41 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 14:49:41 - seekie_pet - INFO - ✓ 睡眠图片加载成功
+2026-04-19 14:49:41 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 14:49:41 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 14:49:41 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 14:49:41 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 14:49:41 - seekie_pet - INFO - 线程启动完成
+2026-04-19 14:49:41 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 14:49:41 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-19 14:49:41 - seekie_pet - ERROR - 应用运行错误: Calling Tcl from different apartment
+2026-04-19 14:49:41 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:49:41 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 14:49:41 - seekie_pet - INFO - 应用已退出
+2026-04-19 14:49:46 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:49:46 - seekie_pet - INFO - 应用已退出
+2026-04-19 14:50:39 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 14:50:39 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 14:50:39 - seekie_pet - INFO - ✓ 机器人图片加载成功
+2026-04-19 14:50:39 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 14:50:39 - seekie_pet - INFO - ✓ 睡眠图片加载成功
+2026-04-19 14:50:39 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 14:50:39 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 14:50:39 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 14:50:39 - seekie_pet - INFO - 线程启动完成
+2026-04-19 14:50:39 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 14:50:39 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-19 14:50:39 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 14:50:39 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 14:52:21 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-19 14:53:56 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 14:53:56 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 14:53:56 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 14:53:56 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 14:53:56 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 14:53:56 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 14:53:56 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 14:53:56 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 14:53:56 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 14:53:56 - seekie_pet - INFO - 线程启动完成
+2026-04-19 14:53:56 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 14:53:56 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 14:53:56 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 14:53:56 - seekie_pet - INFO - 应用已退出
+2026-04-19 15:00:02 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 15:00:02 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 15:00:02 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 15:00:02 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 15:00:02 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 15:00:02 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-19 15:00:02 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 15:00:02 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 15:00:02 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 15:00:02 - seekie_pet - INFO - 线程启动完成
+2026-04-19 15:00:02 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 15:00:02 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 15:00:02 - seekie_pet - INFO - 系统196秒无输入活动，进入睡眠状态
+2026-04-19 15:00:02 - seekie_pet - INFO - 开始移动: 方向=1, 目标=87.0
+2026-04-19 15:00:02 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 15:00:03 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 15:00:03 - seekie_pet - INFO - 应用已退出
+2026-04-19 15:01:57 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 15:01:57 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 15:01:57 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 15:01:57 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 15:01:57 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 15:01:57 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-19 15:01:57 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 15:01:57 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 15:01:57 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 15:01:57 - seekie_pet - INFO - 线程启动完成
+2026-04-19 15:01:57 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 15:01:57 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 15:01:57 - seekie_pet - INFO - 系统311秒无输入活动，进入睡眠状态
+2026-04-19 15:01:57 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.9
+2026-04-19 15:01:57 - seekie_pet - INFO - 停止移动
+2026-04-19 15:01:57 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 15:01:58 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 15:01:58 - seekie_pet - INFO - 应用已退出
+2026-04-19 15:58:38 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 15:58:38 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 15:58:38 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 15:58:38 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 15:58:38 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 15:58:38 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-19 15:58:38 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 15:58:38 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 15:58:38 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 15:58:38 - seekie_pet - INFO - 线程启动完成
+2026-04-19 15:58:38 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 15:58:38 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 15:58:40 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 15:58:47 - seekie_pet - INFO - 开始移动: 方向=1, 目标=89.8
+2026-04-19 15:58:48 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:58:51 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:58:53 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:58:55 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:58:57 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:58:59 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:01 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:02 - seekie_pet - INFO - 停止移动
+2026-04-19 15:59:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:04 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=68.9
+2026-04-19 15:59:05 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:07 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:09 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:12 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:13 - seekie_pet - INFO - 停止移动
+2026-04-19 15:59:14 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:15 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=60.3
+2026-04-19 15:59:16 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:18 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:22 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:24 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:26 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:27 - seekie_pet - INFO - 停止移动
+2026-04-19 15:59:28 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:29 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.8
+2026-04-19 15:59:30 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:32 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:35 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:37 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:38 - seekie_pet - INFO - 停止移动
+2026-04-19 15:59:39 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:40 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=64.9
+2026-04-19 15:59:41 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:43 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:45 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:47 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:49 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:50 - seekie_pet - INFO - 停止移动
+2026-04-19 15:59:51 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:52 - seekie_pet - INFO - 开始移动: 方向=1, 目标=89.7
+2026-04-19 15:59:53 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:56 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:58 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 15:59:59 - seekie_pet - INFO - 停止移动
+2026-04-19 16:00:00 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:02 - seekie_pet - INFO - 开始移动: 方向=1, 目标=79.8
+2026-04-19 16:00:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:06 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:08 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:10 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:12 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:14 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:15 - seekie_pet - INFO - 停止移动
+2026-04-19 16:00:16 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:17 - seekie_pet - INFO - 开始移动: 方向=1, 目标=77.3
+2026-04-19 16:00:18 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:22 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:24 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:26 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:27 - seekie_pet - INFO - 停止移动
+2026-04-19 16:00:29 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:30 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=67.9
+2026-04-19 16:00:31 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:33 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:35 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:36 - seekie_pet - INFO - 停止移动
+2026-04-19 16:00:37 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:40 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.1
+2026-04-19 16:00:41 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:43 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:45 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:47 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:49 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:51 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:52 - seekie_pet - INFO - 停止移动
+2026-04-19 16:00:53 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:54 - seekie_pet - INFO - 开始移动: 方向=1, 目标=77.1
+2026-04-19 16:00:55 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:00:57 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:00 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:02 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:04 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:06 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:08 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:09 - seekie_pet - INFO - 停止移动
+2026-04-19 16:01:10 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:11 - seekie_pet - INFO - 开始移动: 方向=1, 目标=98.5
+2026-04-19 16:01:12 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:14 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:16 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:18 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:23 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:24 - seekie_pet - INFO - 停止移动
+2026-04-19 16:01:25 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:26 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=74.1
+2026-04-19 16:01:27 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:29 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:31 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:33 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:34 - seekie_pet - INFO - 停止移动
+2026-04-19 16:01:35 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:36 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=64.2
+2026-04-19 16:01:37 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:39 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:41 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:43 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:44 - seekie_pet - INFO - 停止移动
+2026-04-19 16:01:46 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:47 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.2
+2026-04-19 16:01:48 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:50 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:52 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:54 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:56 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:01:58 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:00 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:01 - seekie_pet - INFO - 停止移动
+2026-04-19 16:02:02 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:03 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=73.1
+2026-04-19 16:02:04 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:06 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:09 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:11 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:13 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:14 - seekie_pet - INFO - 停止移动
+2026-04-19 16:02:15 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:16 - seekie_pet - INFO - 开始移动: 方向=1, 目标=84.6
+2026-04-19 16:02:17 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:19 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:21 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:23 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:24 - seekie_pet - INFO - 停止移动
+2026-04-19 16:02:25 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:26 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=69.5
+2026-04-19 16:02:27 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:29 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:32 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:34 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:36 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:38 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:40 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:41 - seekie_pet - INFO - 停止移动
+2026-04-19 16:02:42 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:43 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=70.5
+2026-04-19 16:02:44 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:46 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:48 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:50 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:52 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:53 - seekie_pet - INFO - 停止移动
+2026-04-19 16:02:55 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:56 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=65.4
+2026-04-19 16:02:57 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:02:59 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:01 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:05 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:07 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:09 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:10 - seekie_pet - INFO - 停止移动
+2026-04-19 16:03:11 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:12 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.2
+2026-04-19 16:03:13 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:16 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:18 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:21 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-19 16:03:21 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-19 16:03:22 - seekie_pet - ERROR - 输入检测错误: main thread is not in main loop
+2026-04-19 16:03:41 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-19 16:03:41 - seekie_pet - INFO - 开始移动: 方向=1, 目标=81.3
+2026-04-19 16:03:42 - seekie_pet - ERROR - 输入检测错误: main thread is not in main loop
+2026-04-19 16:03:42 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:44 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:46 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:48 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:50 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:52 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:53 - seekie_pet - INFO - 停止移动
+2026-04-19 16:03:54 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:55 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=75.0
+2026-04-19 16:03:56 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:03:59 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:01 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:04 - seekie_pet - INFO - 停止移动
+2026-04-19 16:04:05 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:06 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=73.8
+2026-04-19 16:04:07 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:09 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:11 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:13 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:15 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:17 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:21 - seekie_pet - INFO - 停止移动
+2026-04-19 16:04:22 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:23 - seekie_pet - INFO - 开始移动: 方向=1, 目标=91.5
+2026-04-19 16:04:24 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:26 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:28 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:30 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:32 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:34 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:36 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:37 - seekie_pet - INFO - 停止移动
+2026-04-19 16:04:38 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:39 - seekie_pet - INFO - 开始移动: 方向=1, 目标=85.7
+2026-04-19 16:04:40 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:43 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:45 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:47 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:49 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:51 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:53 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:54 - seekie_pet - INFO - 停止移动
+2026-04-19 16:04:55 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:56 - seekie_pet - INFO - 开始移动: 方向=1, 目标=98.8
+2026-04-19 16:04:57 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:04:59 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:01 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:04 - seekie_pet - INFO - 停止移动
+2026-04-19 16:05:06 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:07 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=61.4
+2026-04-19 16:05:08 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:10 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:12 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:14 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:16 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:18 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:21 - seekie_pet - INFO - 停止移动
+2026-04-19 16:05:22 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:23 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.0
+2026-04-19 16:05:25 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:27 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:29 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:31 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:33 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:35 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:37 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:38 - seekie_pet - INFO - 停止移动
+2026-04-19 16:05:39 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:40 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.6
+2026-04-19 16:05:41 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:43 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:46 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:48 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:50 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:51 - seekie_pet - INFO - 停止移动
+2026-04-19 16:05:52 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:53 - seekie_pet - INFO - 开始移动: 方向=1, 目标=82.2
+2026-04-19 16:05:54 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:56 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:05:58 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:00 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:02 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:04 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:05 - seekie_pet - INFO - 停止移动
+2026-04-19 16:06:06 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:07 - seekie_pet - INFO - 开始移动: 方向=1, 目标=89.7
+2026-04-19 16:06:09 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:11 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:13 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:14 - seekie_pet - INFO - 停止移动
+2026-04-19 16:06:15 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:17 - seekie_pet - INFO - 开始移动: 方向=1, 目标=85.8
+2026-04-19 16:06:19 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:21 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:23 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:25 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:26 - seekie_pet - INFO - 停止移动
+2026-04-19 16:06:27 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:28 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=76.0
+2026-04-19 16:06:29 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:31 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:33 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:35 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:37 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:38 - seekie_pet - INFO - 停止移动
+2026-04-19 16:06:40 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:41 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=59.3
+2026-04-19 16:06:42 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:44 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:46 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:48 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:49 - seekie_pet - INFO - 停止移动
+2026-04-19 16:06:50 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:51 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=60.7
+2026-04-19 16:06:52 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:54 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:56 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:06:58 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:00 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:04 - seekie_pet - INFO - 停止移动
+2026-04-19 16:07:05 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:06 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.0
+2026-04-19 16:07:07 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:09 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:11 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:13 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:15 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:17 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:18 - seekie_pet - INFO - 停止移动
+2026-04-19 16:07:19 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:20 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.4
+2026-04-19 16:07:21 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:23 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:26 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:28 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:30 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:31 - seekie_pet - INFO - 停止移动
+2026-04-19 16:07:32 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:33 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=61.0
+2026-04-19 16:07:34 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:36 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:38 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:40 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:41 - seekie_pet - INFO - 停止移动
+2026-04-19 16:07:42 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:43 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.4
+2026-04-19 16:07:44 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:47 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:49 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:51 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:53 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:54 - seekie_pet - INFO - 停止移动
+2026-04-19 16:07:55 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:56 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=78.6
+2026-04-19 16:07:57 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:07:59 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:01 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:03 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:04 - seekie_pet - INFO - 停止移动
+2026-04-19 16:08:05 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:06 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=68.7
+2026-04-19 16:08:07 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:10 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:12 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:14 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:16 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:17 - seekie_pet - INFO - 停止移动
+2026-04-19 16:08:18 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:19 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.2
+2026-04-19 16:08:20 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:22 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:24 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:26 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:27 - seekie_pet - INFO - 停止移动
+2026-04-19 16:08:28 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:29 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=59.9
+2026-04-19 16:08:31 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:33 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:35 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:37 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:38 - seekie_pet - INFO - 停止移动
+2026-04-19 16:08:39 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:40 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=53.4
+2026-04-19 16:08:41 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:43 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:45 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:47 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:49 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:51 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:54 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:55 - seekie_pet - INFO - 停止移动
+2026-04-19 16:08:56 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:08:57 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=64.1
+2026-04-19 16:08:58 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:00 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:02 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:04 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:06 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:08 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:09 - seekie_pet - INFO - 停止移动
+2026-04-19 16:09:10 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:11 - seekie_pet - INFO - 开始移动: 方向=1, 目标=93.8
+2026-04-19 16:09:12 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:15 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:17 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:19 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:21 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:23 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:25 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:26 - seekie_pet - INFO - 停止移动
+2026-04-19 16:09:27 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:28 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=60.1
+2026-04-19 16:09:29 - seekie_pet - ERROR - 动画错误: main thread is not in main loop
+2026-04-19 16:09:41 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 16:09:41 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 16:09:41 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 16:09:41 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 16:09:41 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 16:09:41 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-19 16:09:41 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 16:09:41 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 16:09:41 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 16:09:41 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 16:09:41 - seekie_pet - INFO - 线程启动完成
+2026-04-19 16:09:41 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 16:09:42 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 16:09:43 - seekie_pet - INFO - 开始移动: 方向=1, 目标=82.1
+2026-04-19 16:09:43 - seekie_pet - INFO - 停止移动
+2026-04-19 16:09:49 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 16:09:49 - seekie_pet - INFO - 应用已退出
+2026-04-19 16:27:30 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 16:27:30 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 16:27:30 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 16:27:30 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 16:27:30 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 16:27:30 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-19 16:27:30 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 16:27:30 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 16:27:30 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 16:27:30 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 16:27:30 - seekie_pet - INFO - 线程启动完成
+2026-04-19 16:27:30 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 16:27:30 - seekie_pet - INFO - 系统156秒无输入活动，进入睡眠状态
+2026-04-19 16:27:30 - seekie_pet - INFO - 开始移动: 方向=1, 目标=93.0
+2026-04-19 16:27:30 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-19 16:27:30 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 16:27:30 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 16:27:30 - seekie_pet - INFO - 应用已退出
+2026-04-19 16:28:42 - seekie_pet - INFO - 窗口初始化完成
+2026-04-19 16:28:42 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-19 16:28:42 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-19 16:28:42 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-19 16:28:42 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-19 16:28:42 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-19 16:28:42 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-19 16:28:42 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-19 16:28:42 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-19 16:28:42 - seekie_pet - INFO - 线程启动完成
+2026-04-19 16:28:42 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-19 16:28:42 - seekie_pet - INFO - 系统228秒无输入活动，进入睡眠状态
+2026-04-19 16:28:42 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-19 16:28:42 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=74.1
+2026-04-19 16:28:42 - seekie_pet - INFO - 到达目标位置: 74.1
+2026-04-19 16:28:42 - seekie_pet - INFO - 正在退出应用...
+2026-04-19 16:28:42 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-19 16:28:42 - seekie_pet - INFO - 应用已退出
