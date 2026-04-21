@@ -58,6 +58,10 @@ class DesktopPetRobot:
         # 图片资源
         self.robot_photo = None
         self.sleep_photo = None
+        self.animation_frames = []  # 动画帧列表
+        self.current_frame = 0
+        self.is_hovering = False  # 鼠标悬停状态
+        self.animation_running = False  # 动画是否正在播放
         
         # 初始化组件
         self._init_components()
@@ -100,10 +104,18 @@ class DesktopPetRobot:
             # 设置透明色
             self.window.attributes('-transparentcolor', 'black')
             
+            # 绑定鼠标事件
+            self.canvas.bind("<Enter>", self._on_mouse_enter)
+            self.canvas.bind("<Leave>", self._on_mouse_leave)
+            
             # 设置初始位置
             self._update_window_position()
             
             info("窗口初始化完成")
+            
+        except Exception as e:
+            error(f"窗口初始化失败: {e}")
+            raise
             
         except Exception as e:
             error(f"窗口初始化失败: {e}")
@@ -152,6 +164,38 @@ class DesktopPetRobot:
                 if sleep_image:
                     self.sleep_photo = ImageTk.PhotoImage(sleep_image)
             
+            # 加载动画精灵图
+            animation_path = os.path.join(current_dir, "main_pic", "see-left-and-right.png")
+            info(f"加载动画精灵图: {animation_path}")
+            
+            if os.path.exists(animation_path):
+                from PIL import Image
+                sprite_sheet = Image.open(animation_path)
+                info(f"精灵图尺寸: {sprite_sheet.size}")
+                
+                # 假设是垂直排列的精灵图，每帧50x50
+                frame_height = 50
+                frame_width = 50
+                total_frames = sprite_sheet.height // frame_height
+                
+                info(f"检测到 {total_frames} 帧动画 (每帧{frame_width}x{frame_height})")
+                
+                # 提取每一帧
+                self.animation_frames = []
+                for i in range(total_frames):
+                    # 裁剪每一帧
+                    frame = sprite_sheet.crop((0, i * frame_height, frame_width, (i + 1) * frame_height))
+                    # 调整大小到机器人尺寸
+                    if frame.size != (self.config.robot.robot_size, self.config.robot.robot_size):
+                        frame = frame.resize((self.config.robot.robot_size, self.config.robot.robot_size), Image.Resampling.LANCZOS)
+                    self.animation_frames.append(ImageTk.PhotoImage(frame))
+                
+                info(f"[成功] 动画精灵图加载成功，共{len(self.animation_frames)}帧")
+            else:
+                error("[警告] 动画精灵图不存在，使用默认动画")
+                # 创建简单的默认动画（左右移动的方块）
+                self._create_default_animation()
+            
             # 初始绘制
             self._draw_current()
             
@@ -174,9 +218,41 @@ class DesktopPetRobot:
                 draw.line([30, 17, 35, 17], fill='#FFFFFF', width=3)
                 self.sleep_photo = ImageTk.PhotoImage(img)
                 
-                info("使用默认图片")
+                # 创建默认动画
+                self._create_default_animation()
+                
+                info("使用默认图片和动画")
             except:
                 pass
+    
+    def _create_default_animation(self):
+        """创建默认动画（当精灵图不存在时）"""
+        try:
+            from PIL import Image, ImageDraw
+            self.animation_frames = []
+            
+            # 创建6帧简单的左右张望动画
+            for i in range(6):
+                img = Image.new('RGBA', (self.config.robot.robot_size, self.config.robot.robot_size), (0, 0, 0, 0))
+                draw = ImageDraw.Draw(img)
+                
+                # 绘制机器人身体
+                draw.rectangle([10, 10, 40, 40], fill='#4169E1', outline='#1E3A8A', width=2)
+                
+                # 绘制眼睛（左右移动效果）
+                eye_offset = (i - 2.5) * 3  # 从-7.5到+7.5
+                left_eye_x = 20 + eye_offset
+                right_eye_x = 30 + eye_offset
+                
+                draw.ellipse([left_eye_x, 15, left_eye_x + 5, 20], fill='white')
+                draw.ellipse([right_eye_x, 15, right_eye_x + 5, 20], fill='white')
+                
+                self.animation_frames.append(ImageTk.PhotoImage(img))
+            
+            info(f"创建默认动画，共{len(self.animation_frames)}帧")
+        except Exception as e:
+            error(f"创建默认动画失败: {e}")
+            self.animation_frames = []
     
     def _init_tray(self):
         """初始化系统托盘"""
@@ -295,6 +371,15 @@ class DesktopPetRobot:
                     image=self.sleep_photo,
                     tags="sleep"
                 )
+        elif self.is_hovering and self.animation_frames:
+            # 绘制动画帧
+            if self.current_frame < len(self.animation_frames):
+                self.canvas.create_image(
+                    self.config.robot.robot_size // 2,
+                    self.config.robot.robot_size // 2,
+                    image=self.animation_frames[self.current_frame],
+                    tags="animation"
+                )
         else:
             # 绘制机器人图片
             if self.robot_photo:
@@ -304,6 +389,62 @@ class DesktopPetRobot:
                     image=self.robot_photo,
                     tags="robot"
                 )
+    
+    def _on_mouse_enter(self, event):
+        """鼠标进入事件"""
+        if self.is_sleeping:
+            return  # 睡眠状态下不响应鼠标事件
+        
+        # 检查鼠标是否在机器人图片区域内
+        # 整个图片区域都作为触发区域
+        robot_size = self.config.robot.robot_size
+        
+        # 检查鼠标是否在图片区域内
+        in_region = (0 <= event.x <= robot_size and 
+                     0 <= event.y <= robot_size)
+        
+        # 显示调试信息
+        info(f"鼠标位置: x={event.x}, y={event.y}, 图片尺寸={robot_size}x{robot_size}")
+        
+        if in_region:
+            info(f"鼠标在机器人图片区域内，触发动画")
+            self.is_hovering = True
+            self.animation_running = True
+            self.current_frame = 0
+            
+            # 立即绘制第一帧
+            self._draw_current()
+            # 启动动画播放
+            self._start_animation()
+            return
+        else:
+            info(f"鼠标不在图片区域")
+    
+    def _on_mouse_leave(self, event):
+        """鼠标离开事件"""
+        info("鼠标离开机器人")
+        self.is_hovering = False
+        self.animation_running = False
+        
+        # 恢复普通状态
+        self._draw_current()
+    
+    def _start_animation(self):
+        """开始播放动画"""
+        if not self.animation_frames or not self.animation_running:
+            return
+        
+        # 更新当前帧
+        self.current_frame += 1
+        if self.current_frame >= len(self.animation_frames):
+            self.current_frame = 0  # 循环播放
+        
+        # 绘制当前帧
+        self._draw_current()
+        
+        # 更慢的动画速度 (300ms每帧，约3.3FPS)
+        if self.animation_running:
+            self.window.after(300, self._start_animation)
     
     # ==================== 控制方法 ====================
     

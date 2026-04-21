@@ -582,3 +582,837 @@
 2026-04-19 16:28:42 - seekie_pet - INFO - 正在退出应用...
 2026-04-19 16:28:42 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
 2026-04-19 16:28:42 - seekie_pet - INFO - 应用已退出
+2026-04-21 17:40:35 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 17:40:35 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 17:40:35 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 17:40:35 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 17:40:35 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 17:40:35 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 17:40:35 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 17:40:35 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 17:40:35 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 17:40:35 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 17:40:35 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 17:40:35 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 17:40:35 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 17:40:35 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 17:40:35 - seekie_pet - INFO - 线程启动完成
+2026-04-21 17:40:35 - seekie_pet - INFO - 系统87秒无输入活动，进入睡眠状态
+2026-04-21 17:40:35 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 17:40:35 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 17:40:35 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 17:40:52 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:40:52 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.3
+2026-04-21 17:40:58 - seekie_pet - INFO - 到达目标位置: 88.3
+2026-04-21 17:41:02 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=86.1
+2026-04-21 17:41:03 - seekie_pet - INFO - 到达目标位置: 86.1
+2026-04-21 17:41:08 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:41:08 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:41:08 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:41:11 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:41:12 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=79.6
+2026-04-21 17:41:15 - seekie_pet - INFO - 到达目标位置: 79.6
+2026-04-21 17:41:22 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=63.5
+2026-04-21 17:41:29 - seekie_pet - INFO - 到达目标位置: 63.5
+2026-04-21 17:41:32 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.5
+2026-04-21 17:41:41 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 17:41:41 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-21 17:41:45 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:41:45 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=52.5
+2026-04-21 17:41:59 - seekie_pet - INFO - 到达目标位置: 52.5
+2026-04-21 17:41:59 - seekie_pet - INFO - 开始移动: 方向=1, 目标=74.0
+2026-04-21 17:42:08 - seekie_pet - INFO - 到达目标位置: 74.0
+2026-04-21 17:42:09 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=72.1
+2026-04-21 17:42:10 - seekie_pet - INFO - 到达目标位置: 72.1
+2026-04-21 17:42:19 - seekie_pet - INFO - 开始移动: 方向=1, 目标=79.9
+2026-04-21 17:42:22 - seekie_pet - INFO - 到达目标位置: 79.9
+2026-04-21 17:42:25 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:42:29 - seekie_pet - INFO - 开始移动: 方向=1, 目标=80.0
+2026-04-21 17:42:29 - seekie_pet - INFO - 到达目标位置: 80.0
+2026-04-21 17:42:30 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:42:36 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:42:37 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:42:38 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:42:39 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:42:39 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.5
+2026-04-21 17:42:41 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:42:43 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:42:46 - seekie_pet - INFO - 到达目标位置: 97.5
+2026-04-21 17:42:49 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=80.9
+2026-04-21 17:42:56 - seekie_pet - INFO - 到达目标位置: 80.9
+2026-04-21 17:42:57 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 17:43:10 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:43:10 - seekie_pet - INFO - 开始移动: 方向=1, 目标=81.5
+2026-04-21 17:43:11 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:43:11 - seekie_pet - INFO - 到达目标位置: 81.5
+2026-04-21 17:43:13 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:43:14 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:43:16 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:43:20 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=66.5
+2026-04-21 17:43:23 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:43:27 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:43:27 - seekie_pet - INFO - 到达目标位置: 66.5
+2026-04-21 17:43:30 - seekie_pet - INFO - 开始移动: 方向=1, 目标=91.1
+2026-04-21 17:43:31 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:43:32 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:43:41 - seekie_pet - INFO - 到达目标位置: 91.1
+2026-04-21 17:43:41 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=77.7
+2026-04-21 17:43:46 - seekie_pet - INFO - 到达目标位置: 77.7
+2026-04-21 17:43:51 - seekie_pet - INFO - 开始移动: 方向=1, 目标=93.9
+2026-04-21 17:43:55 - seekie_pet - INFO - 鼠标悬停在机器人上方
+2026-04-21 17:43:55 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:43:58 - seekie_pet - INFO - 到达目标位置: 93.9
+2026-04-21 17:44:01 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=80.8
+2026-04-21 17:44:22 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 17:44:22 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 17:44:22 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 17:44:22 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 17:44:22 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 17:44:22 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 17:44:22 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 17:44:22 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 17:44:22 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 17:44:22 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 17:44:22 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 17:44:22 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 17:44:22 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 17:44:22 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 17:44:22 - seekie_pet - INFO - 线程启动完成
+2026-04-21 17:44:22 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 17:44:22 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 17:44:23 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 17:44:23 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 17:44:29 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:44:31 - seekie_pet - INFO - 鼠标悬停在机器人头部
+2026-04-21 17:44:31 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:44:32 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=57.7
+2026-04-21 17:44:35 - seekie_pet - INFO - 正在退出应用...
+2026-04-21 17:44:35 - seekie_pet - INFO - 应用已退出
+2026-04-21 17:50:35 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 17:50:35 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 17:50:35 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 17:50:35 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 17:50:35 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 17:50:35 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 17:50:35 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 17:50:35 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 17:50:35 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 17:50:35 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 17:50:35 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 17:50:35 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 17:50:35 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 17:50:35 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 17:50:35 - seekie_pet - INFO - 线程启动完成
+2026-04-21 17:50:35 - seekie_pet - INFO - 系统50秒无输入活动，进入睡眠状态
+2026-04-21 17:50:35 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 17:50:35 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 17:50:35 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 17:50:36 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:50:44 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:50:45 - seekie_pet - INFO - 开始移动: 方向=1, 目标=84.6
+2026-04-21 17:50:47 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:50:49 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:50:49 - seekie_pet - INFO - 到达目标位置: 84.6
+2026-04-21 17:50:54 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:50:55 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:50:55 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=80.4
+2026-04-21 17:50:57 - seekie_pet - INFO - 到达目标位置: 80.4
+2026-04-21 17:51:05 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=50.5
+2026-04-21 17:51:10 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:51:18 - seekie_pet - INFO - 到达目标位置: 50.5
+2026-04-21 17:51:18 - seekie_pet - INFO - 开始移动: 方向=1, 目标=76.6
+2026-04-21 17:51:21 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 17:51:21 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-21 17:51:43 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:51:43 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.2
+2026-04-21 17:51:44 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:51:45 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:52:07 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 17:52:07 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 17:52:07 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 17:52:07 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 17:52:07 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 17:52:07 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 17:52:07 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 17:52:07 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 17:52:07 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 17:52:07 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 17:52:07 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 17:52:07 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 17:52:07 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 17:52:07 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 17:52:07 - seekie_pet - INFO - 线程启动完成
+2026-04-21 17:52:07 - seekie_pet - INFO - 系统15秒无输入活动，进入睡眠状态
+2026-04-21 17:52:07 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 17:52:07 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 17:52:08 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 17:52:08 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:52:13 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:52:16 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:52:17 - seekie_pet - INFO - 开始移动: 方向=1, 目标=89.4
+2026-04-21 17:52:23 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:52:23 - seekie_pet - INFO - 到达目标位置: 89.4
+2026-04-21 17:52:27 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.4
+2026-04-21 17:52:30 - seekie_pet - INFO - 到达目标位置: 95.4
+2026-04-21 17:52:34 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 17:52:43 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:52:43 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.4
+2026-04-21 17:52:44 - seekie_pet - INFO - 到达目标位置: 97.4
+2026-04-21 17:52:54 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=67.1
+2026-04-21 17:52:59 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:53:00 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:53:00 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:53:00 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:53:01 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:53:06 - seekie_pet - INFO - 到达目标位置: 67.1
+2026-04-21 17:53:06 - seekie_pet - INFO - 开始移动: 方向=1, 目标=75.0
+2026-04-21 17:53:08 - seekie_pet - INFO - 正在退出应用...
+2026-04-21 17:53:08 - seekie_pet - INFO - 应用已退出
+2026-04-21 17:54:13 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 17:54:13 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 17:54:13 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 17:54:13 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 17:54:13 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 17:54:13 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 17:54:13 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 17:54:13 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 17:54:13 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 17:54:13 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 17:54:13 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 17:54:13 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 17:54:13 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 17:54:13 - seekie_pet - INFO - 线程启动完成
+2026-04-21 17:54:13 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 17:54:13 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 17:54:13 - seekie_pet - INFO - 系统17秒无输入活动，进入睡眠状态
+2026-04-21 17:54:13 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 17:54:13 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 17:54:22 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:54:22 - seekie_pet - INFO - 开始移动: 方向=1, 目标=99.0
+2026-04-21 17:54:26 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:54:29 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:54:33 - seekie_pet - INFO - 到达目标位置: 99.0
+2026-04-21 17:54:33 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=96.4
+2026-04-21 17:54:34 - seekie_pet - INFO - 到达目标位置: 96.4
+2026-04-21 17:54:37 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:54:37 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 17:54:43 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=53.9
+2026-04-21 17:54:51 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 17:54:51 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-21 17:54:56 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 17:54:56 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=73.4
+2026-04-21 17:54:57 - seekie_pet - INFO - 到达目标位置: 73.4
+2026-04-21 17:55:06 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=65.0
+2026-04-21 17:55:09 - seekie_pet - INFO - 到达目标位置: 65.0
+2026-04-21 18:47:00 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 18:47:00 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 18:47:00 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 18:47:00 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 18:47:00 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 18:47:00 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 18:47:00 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 18:47:00 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 18:47:00 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 18:47:00 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 18:47:00 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 18:47:00 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 18:47:00 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 18:47:00 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 18:47:00 - seekie_pet - INFO - 线程启动完成
+2026-04-21 18:47:00 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 18:47:00 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 18:47:00 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 18:47:10 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=56.3
+2026-04-21 18:47:18 - seekie_pet - INFO - 到达目标位置: 56.3
+2026-04-21 18:47:20 - seekie_pet - INFO - 开始移动: 方向=1, 目标=73.0
+2026-04-21 18:47:27 - seekie_pet - INFO - 到达目标位置: 73.0
+2026-04-21 18:47:30 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.1
+2026-04-21 18:47:39 - seekie_pet - INFO - 到达目标位置: 95.1
+2026-04-21 18:47:40 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=80.5
+2026-04-21 18:47:46 - seekie_pet - INFO - 到达目标位置: 80.5
+2026-04-21 18:47:50 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=78.4
+2026-04-21 18:47:51 - seekie_pet - INFO - 到达目标位置: 78.4
+2026-04-21 18:47:56 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 18:48:01 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 18:48:01 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=60.6
+2026-04-21 18:48:08 - seekie_pet - INFO - 到达目标位置: 60.6
+2026-04-21 18:48:11 - seekie_pet - INFO - 开始移动: 方向=1, 目标=93.1
+2026-04-21 18:48:25 - seekie_pet - INFO - 到达目标位置: 93.1
+2026-04-21 18:48:25 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=55.5
+2026-04-21 18:48:40 - seekie_pet - INFO - 到达目标位置: 55.5
+2026-04-21 18:48:40 - seekie_pet - INFO - 开始移动: 方向=1, 目标=74.1
+2026-04-21 18:48:48 - seekie_pet - INFO - 到达目标位置: 74.1
+2026-04-21 18:48:50 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=64.7
+2026-04-21 18:48:54 - seekie_pet - INFO - 到达目标位置: 64.7
+2026-04-21 18:49:00 - seekie_pet - INFO - 开始移动: 方向=1, 目标=89.1
+2026-04-21 18:49:11 - seekie_pet - INFO - 到达目标位置: 89.1
+2026-04-21 18:49:11 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.5
+2026-04-21 18:49:13 - seekie_pet - INFO - 到达目标位置: 95.5
+2026-04-21 18:49:21 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=86.6
+2026-04-21 18:49:24 - seekie_pet - INFO - 到达目标位置: 86.6
+2026-04-21 18:49:31 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=76.0
+2026-04-21 18:49:35 - seekie_pet - INFO - 到达目标位置: 76.0
+2026-04-21 18:49:41 - seekie_pet - INFO - 开始移动: 方向=1, 目标=86.8
+2026-04-21 18:49:45 - seekie_pet - INFO - 到达目标位置: 86.8
+2026-04-21 18:49:51 - seekie_pet - INFO - 开始移动: 方向=1, 目标=94.4
+2026-04-21 18:49:54 - seekie_pet - INFO - 到达目标位置: 94.4
+2026-04-21 18:50:01 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=73.8
+2026-04-21 18:50:09 - seekie_pet - INFO - 到达目标位置: 73.8
+2026-04-21 18:50:11 - seekie_pet - INFO - 开始移动: 方向=1, 目标=80.3
+2026-04-21 18:50:13 - seekie_pet - INFO - 到达目标位置: 80.3
+2026-04-21 18:50:21 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=66.6
+2026-04-21 18:50:26 - seekie_pet - INFO - 到达目标位置: 66.6
+2026-04-21 18:50:31 - seekie_pet - INFO - 开始移动: 方向=1, 目标=98.1
+2026-04-21 18:50:31 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:50:38 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:50:44 - seekie_pet - INFO - 到达目标位置: 98.1
+2026-04-21 18:50:44 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=83.2
+2026-04-21 18:50:44 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:50:46 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:50:47 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:50:50 - seekie_pet - INFO - 到达目标位置: 83.2
+2026-04-21 18:50:54 - seekie_pet - INFO - 开始移动: 方向=1, 目标=94.8
+2026-04-21 18:50:59 - seekie_pet - INFO - 到达目标位置: 94.8
+2026-04-21 18:51:04 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=82.2
+2026-04-21 18:51:09 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:51:09 - seekie_pet - INFO - 到达目标位置: 82.2
+2026-04-21 18:51:44 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 18:51:44 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 18:51:44 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 18:51:44 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 18:51:44 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 18:51:44 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 18:51:44 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 18:51:44 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 18:51:44 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 18:51:44 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 18:51:44 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 18:51:44 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 18:51:44 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 18:51:44 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 18:51:44 - seekie_pet - INFO - 线程启动完成
+2026-04-21 18:51:44 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 18:51:44 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 18:51:44 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 18:51:46 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:51:48 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:51:54 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=73.5
+2026-04-21 18:51:54 - seekie_pet - INFO - 到达目标位置: 73.5
+2026-04-21 18:51:54 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:52:04 - seekie_pet - INFO - 开始移动: 方向=1, 目标=77.7
+2026-04-21 18:52:05 - seekie_pet - INFO - 到达目标位置: 77.7
+2026-04-21 18:52:14 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=69.0
+2026-04-21 18:52:17 - seekie_pet - INFO - 到达目标位置: 69.0
+2026-04-21 18:52:24 - seekie_pet - INFO - 开始移动: 方向=1, 目标=78.6
+2026-04-21 18:52:28 - seekie_pet - INFO - 到达目标位置: 78.6
+2026-04-21 18:52:34 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=74.4
+2026-04-21 18:52:35 - seekie_pet - INFO - 到达目标位置: 74.4
+2026-04-21 18:52:44 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=70.3
+2026-04-21 18:52:45 - seekie_pet - INFO - 到达目标位置: 70.3
+2026-04-21 18:52:54 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.3
+2026-04-21 18:53:05 - seekie_pet - INFO - 到达目标位置: 97.3
+2026-04-21 18:53:05 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=90.4
+2026-04-21 18:53:08 - seekie_pet - INFO - 到达目标位置: 90.4
+2026-04-21 18:53:15 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=70.5
+2026-04-21 18:53:23 - seekie_pet - INFO - 到达目标位置: 70.5
+2026-04-21 18:53:25 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=54.4
+2026-04-21 18:53:32 - seekie_pet - INFO - 到达目标位置: 54.4
+2026-04-21 18:53:35 - seekie_pet - INFO - 开始移动: 方向=1, 目标=80.3
+2026-04-21 18:53:46 - seekie_pet - INFO - 到达目标位置: 80.3
+2026-04-21 18:53:46 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=56.6
+2026-04-21 18:53:56 - seekie_pet - INFO - 到达目标位置: 56.6
+2026-04-21 18:53:56 - seekie_pet - INFO - 开始移动: 方向=1, 目标=78.4
+2026-04-21 18:53:59 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:54:05 - seekie_pet - INFO - 到达目标位置: 78.4
+2026-04-21 18:54:06 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.6
+2026-04-21 18:54:10 - seekie_pet - INFO - 到达目标位置: 88.6
+2026-04-21 18:54:16 - seekie_pet - INFO - 开始移动: 方向=1, 目标=91.3
+2026-04-21 18:54:17 - seekie_pet - INFO - 到达目标位置: 91.3
+2026-04-21 18:54:23 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 18:54:27 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 18:54:27 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=56.6
+2026-04-21 18:54:41 - seekie_pet - INFO - 到达目标位置: 56.6
+2026-04-21 18:54:41 - seekie_pet - INFO - 开始移动: 方向=1, 目标=78.8
+2026-04-21 18:55:34 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 18:55:34 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 18:55:34 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 18:55:34 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 18:55:34 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 18:55:34 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 18:55:34 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 18:55:34 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 18:55:34 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 18:55:34 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 18:55:34 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 18:55:34 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 18:55:34 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 18:55:34 - seekie_pet - INFO - 线程启动完成
+2026-04-21 18:55:34 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 18:55:34 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 18:55:34 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 18:55:34 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 18:55:37 - seekie_pet - INFO - 鼠标位置: x=6, y=2, 中心=(25,25), 距离=29.8, 角度=-129.6°
+2026-04-21 18:55:37 - seekie_pet - INFO - 鼠标在正上方扇形区域内: 距离=29.8, 角度=-129.6°
+2026-04-21 18:55:39 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:55:40 - seekie_pet - INFO - 鼠标位置: x=34, y=2, 中心=(25,25), 距离=24.7, 角度=-68.6°
+2026-04-21 18:55:40 - seekie_pet - INFO - 鼠标在正上方扇形区域内: 距离=24.7, 角度=-68.6°
+2026-04-21 18:55:43 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:55:43 - seekie_pet - INFO - 鼠标位置: x=49, y=33, 中心=(25,25), 距离=25.3, 角度=18.4°
+2026-04-21 18:55:43 - seekie_pet - INFO - 鼠标在半径内但角度外: x=49, y=33, 距离=25.3, 角度=18.4°
+2026-04-21 18:55:44 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.8
+2026-04-21 18:55:45 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 18:55:50 - seekie_pet - INFO - 到达目标位置: 88.8
+2026-04-21 18:55:54 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=57.2
+2026-04-21 18:56:07 - seekie_pet - INFO - 到达目标位置: 57.2
+2026-04-21 18:56:07 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.0
+2026-04-21 18:56:18 - seekie_pet - INFO - 正在退出应用...
+2026-04-21 18:56:18 - seekie_pet - INFO - 应用已退出
+2026-04-21 18:59:24 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 18:59:24 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 18:59:25 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 18:59:25 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 18:59:25 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 18:59:25 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 18:59:25 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 18:59:25 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 18:59:25 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 18:59:25 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 18:59:25 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 18:59:25 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 18:59:25 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 18:59:25 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 18:59:25 - seekie_pet - INFO - 线程启动完成
+2026-04-21 18:59:25 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 18:59:25 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 18:59:25 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 18:59:34 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.8
+2026-04-21 18:59:41 - seekie_pet - INFO - 到达目标位置: 90.8
+2026-04-21 18:59:44 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=83.6
+2026-04-21 18:59:47 - seekie_pet - INFO - 到达目标位置: 83.6
+2026-04-21 18:59:54 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=50.0
+2026-04-21 19:00:08 - seekie_pet - INFO - 到达目标位置: 50.0
+2026-04-21 19:00:08 - seekie_pet - INFO - 开始移动: 方向=1, 目标=67.4
+2026-04-21 19:00:09 - seekie_pet - INFO - 鼠标位置: x=48, y=29, 中心=(25,25), 距离=23.3, 角度=9.9°
+2026-04-21 19:00:09 - seekie_pet - INFO - 鼠标在半径内但角度外: x=48, y=29, 距离=23.3, 角度=9.9°
+2026-04-21 19:00:11 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:00:13 - seekie_pet - INFO - 正在退出应用...
+2026-04-21 19:00:13 - seekie_pet - INFO - 应用已退出
+2026-04-21 19:01:30 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 19:01:30 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 19:01:30 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 19:01:30 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 19:01:30 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 19:01:30 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 19:01:30 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 19:01:30 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 19:01:30 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 19:01:30 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 19:01:30 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 19:01:30 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 19:01:30 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 19:01:30 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 19:01:30 - seekie_pet - INFO - 线程启动完成
+2026-04-21 19:01:30 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 19:01:30 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 19:01:30 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 19:01:40 - seekie_pet - INFO - 开始移动: 方向=1, 目标=98.2
+2026-04-21 19:01:50 - seekie_pet - INFO - 到达目标位置: 98.2
+2026-04-21 19:01:50 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=95.9
+2026-04-21 19:01:51 - seekie_pet - INFO - 到达目标位置: 95.9
+2026-04-21 19:02:00 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=69.0
+2026-04-21 19:02:11 - seekie_pet - INFO - 到达目标位置: 69.0
+2026-04-21 19:02:11 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=52.0
+2026-04-21 19:02:18 - seekie_pet - INFO - 到达目标位置: 52.0
+2026-04-21 19:02:21 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.5
+2026-04-21 19:02:40 - seekie_pet - INFO - 到达目标位置: 96.5
+2026-04-21 19:02:40 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=75.6
+2026-04-21 19:02:48 - seekie_pet - INFO - 到达目标位置: 75.6
+2026-04-21 19:02:50 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=51.1
+2026-04-21 19:02:54 - seekie_pet - INFO - 鼠标位置: x=11, y=2, 中心=(25,25)
+2026-04-21 19:02:54 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:02:54 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:02:54 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:02:54 - seekie_pet - INFO - 鼠标位置: x=49, y=34, 中心=(25,25)
+2026-04-21 19:02:54 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:02:54 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:02:54 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:03:00 - seekie_pet - INFO - 到达目标位置: 51.1
+2026-04-21 19:03:00 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.2
+2026-04-21 19:03:16 - seekie_pet - INFO - 到达目标位置: 90.2
+2026-04-21 19:03:16 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=53.1
+2026-04-21 19:03:32 - seekie_pet - INFO - 到达目标位置: 53.1
+2026-04-21 19:03:32 - seekie_pet - INFO - 开始移动: 方向=1, 目标=79.6
+2026-04-21 19:03:43 - seekie_pet - INFO - 到达目标位置: 79.6
+2026-04-21 19:03:43 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=62.6
+2026-04-21 19:03:50 - seekie_pet - INFO - 到达目标位置: 62.6
+2026-04-21 19:03:53 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=55.6
+2026-04-21 19:03:56 - seekie_pet - INFO - 到达目标位置: 55.6
+2026-04-21 19:04:03 - seekie_pet - INFO - 开始移动: 方向=1, 目标=64.3
+2026-04-21 19:04:06 - seekie_pet - INFO - 到达目标位置: 64.3
+2026-04-21 19:04:13 - seekie_pet - INFO - 开始移动: 方向=1, 目标=93.9
+2026-04-21 19:04:25 - seekie_pet - INFO - 到达目标位置: 93.9
+2026-04-21 19:04:25 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=82.4
+2026-04-21 19:04:30 - seekie_pet - INFO - 到达目标位置: 82.4
+2026-04-21 19:04:35 - seekie_pet - INFO - 开始移动: 方向=1, 目标=86.6
+2026-04-21 19:04:37 - seekie_pet - INFO - 到达目标位置: 86.6
+2026-04-21 19:04:45 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=83.5
+2026-04-21 19:04:47 - seekie_pet - INFO - 到达目标位置: 83.5
+2026-04-21 19:04:55 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=56.2
+2026-04-21 19:05:07 - seekie_pet - INFO - 到达目标位置: 56.2
+2026-04-21 19:05:07 - seekie_pet - INFO - 开始移动: 方向=1, 目标=75.2
+2026-04-21 19:05:15 - seekie_pet - INFO - 到达目标位置: 75.2
+2026-04-21 19:05:17 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=53.6
+2026-04-21 19:05:20 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 19:05:20 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-21 19:05:38 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 19:05:38 - seekie_pet - INFO - 开始移动: 方向=1, 目标=81.9
+2026-04-21 19:05:44 - seekie_pet - INFO - 到达目标位置: 81.9
+2026-04-21 19:05:48 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=61.6
+2026-04-21 19:05:56 - seekie_pet - INFO - 鼠标位置: x=4, y=14, 中心=(25,25)
+2026-04-21 19:05:56 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:05:56 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:05:57 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:05:57 - seekie_pet - INFO - 到达目标位置: 61.6
+2026-04-21 19:05:58 - seekie_pet - INFO - 开始移动: 方向=1, 目标=75.2
+2026-04-21 19:06:04 - seekie_pet - INFO - 到达目标位置: 75.2
+2026-04-21 19:06:08 - seekie_pet - INFO - 开始移动: 方向=1, 目标=86.7
+2026-04-21 19:06:13 - seekie_pet - INFO - 到达目标位置: 86.7
+2026-04-21 19:06:18 - seekie_pet - INFO - 开始移动: 方向=1, 目标=87.9
+2026-04-21 19:06:19 - seekie_pet - INFO - 到达目标位置: 87.9
+2026-04-21 19:06:28 - seekie_pet - INFO - 开始移动: 方向=1, 目标=93.0
+2026-04-21 19:06:30 - seekie_pet - INFO - 到达目标位置: 93.0
+2026-04-21 19:06:38 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=87.2
+2026-04-21 19:06:41 - seekie_pet - INFO - 到达目标位置: 87.2
+2026-04-21 19:06:48 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.5
+2026-04-21 19:06:50 - seekie_pet - INFO - 到达目标位置: 90.5
+2026-04-21 19:06:58 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=83.7
+2026-04-21 19:07:01 - seekie_pet - INFO - 到达目标位置: 83.7
+2026-04-21 19:07:08 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=64.5
+2026-04-21 19:07:16 - seekie_pet - INFO - 到达目标位置: 64.5
+2026-04-21 19:07:18 - seekie_pet - INFO - 开始移动: 方向=1, 目标=64.8
+2026-04-21 19:07:18 - seekie_pet - INFO - 到达目标位置: 64.8
+2026-04-21 19:07:28 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.2
+2026-04-21 19:07:30 - seekie_pet - INFO - 鼠标位置: x=29, y=41, 中心=(25,25)
+2026-04-21 19:07:30 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:07:30 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:07:31 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:07:35 - seekie_pet - INFO - 鼠标位置: x=24, y=1, 中心=(25,25)
+2026-04-21 19:07:35 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:07:35 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:07:35 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:07:38 - seekie_pet - INFO - 到达目标位置: 88.2
+2026-04-21 19:07:38 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=79.5
+2026-04-21 19:07:42 - seekie_pet - INFO - 到达目标位置: 79.5
+2026-04-21 19:07:48 - seekie_pet - INFO - 开始移动: 方向=1, 目标=98.7
+2026-04-21 19:07:55 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 19:07:55 - seekie_pet - INFO - 进入睡眠状态，停止移动
+2026-04-21 19:08:59 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 19:08:59 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=67.8
+2026-04-21 19:09:11 - seekie_pet - INFO - 到达目标位置: 67.8
+2026-04-21 19:09:11 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=52.4
+2026-04-21 19:09:17 - seekie_pet - INFO - 到达目标位置: 52.4
+2026-04-21 19:09:21 - seekie_pet - INFO - 开始移动: 方向=1, 目标=81.1
+2026-04-21 19:09:33 - seekie_pet - INFO - 到达目标位置: 81.1
+2026-04-21 19:09:33 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=73.7
+2026-04-21 19:09:36 - seekie_pet - INFO - 到达目标位置: 73.7
+2026-04-21 19:09:43 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=70.6
+2026-04-21 19:09:44 - seekie_pet - INFO - 到达目标位置: 70.6
+2026-04-21 19:09:53 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=65.2
+2026-04-21 19:09:55 - seekie_pet - INFO - 到达目标位置: 65.2
+2026-04-21 19:10:03 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=53.9
+2026-04-21 19:10:04 - seekie_pet - INFO - 鼠标位置: x=6, y=1, 中心=(25,25)
+2026-04-21 19:10:04 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:04 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:06 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:08 - seekie_pet - INFO - 到达目标位置: 53.9
+2026-04-21 19:10:08 - seekie_pet - INFO - 鼠标位置: x=0, y=18, 中心=(25,25)
+2026-04-21 19:10:08 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:08 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:09 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:09 - seekie_pet - INFO - 鼠标位置: x=23, y=2, 中心=(25,25)
+2026-04-21 19:10:09 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:09 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:10 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:10 - seekie_pet - INFO - 鼠标位置: x=36, y=2, 中心=(25,25)
+2026-04-21 19:10:10 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:10 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:11 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:11 - seekie_pet - INFO - 鼠标位置: x=34, y=2, 中心=(25,25)
+2026-04-21 19:10:11 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:11 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:13 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:13 - seekie_pet - INFO - 鼠标位置: x=49, y=17, 中心=(25,25)
+2026-04-21 19:10:13 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:13 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:13 - seekie_pet - INFO - 开始移动: 方向=1, 目标=94.2
+2026-04-21 19:10:14 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:14 - seekie_pet - INFO - 鼠标位置: x=48, y=26, 中心=(25,25)
+2026-04-21 19:10:14 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:14 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:14 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:15 - seekie_pet - INFO - 鼠标位置: x=1, y=12, 中心=(25,25)
+2026-04-21 19:10:15 - seekie_pet - INFO - 正上方区域: 左=15, 右=35, 上=10, 下=25
+2026-04-21 19:10:15 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:10:15 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:10:30 - seekie_pet - INFO - 到达目标位置: 94.2
+2026-04-21 19:10:30 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=71.6
+2026-04-21 19:10:40 - seekie_pet - INFO - 到达目标位置: 71.6
+2026-04-21 19:10:40 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=52.3
+2026-04-21 19:10:48 - seekie_pet - INFO - 到达目标位置: 52.3
+2026-04-21 19:10:50 - seekie_pet - INFO - 开始移动: 方向=1, 目标=52.7
+2026-04-21 19:10:50 - seekie_pet - INFO - 到达目标位置: 52.7
+2026-04-21 19:11:37 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 19:11:37 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 19:11:37 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 19:11:37 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 19:11:37 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 19:11:37 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 19:11:37 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 19:11:37 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 19:11:37 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 19:11:37 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 19:11:37 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 19:11:37 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 19:11:37 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 19:11:37 - seekie_pet - INFO - 线程启动完成
+2026-04-21 19:11:37 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 19:11:37 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 19:11:37 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 19:11:38 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 19:11:47 - seekie_pet - INFO - 开始移动: 方向=1, 目标=91.0
+2026-04-21 19:11:54 - seekie_pet - INFO - 到达目标位置: 91.0
+2026-04-21 19:11:57 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=60.8
+2026-04-21 19:12:10 - seekie_pet - INFO - 到达目标位置: 60.8
+2026-04-21 19:12:10 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=56.4
+2026-04-21 19:12:12 - seekie_pet - INFO - 到达目标位置: 56.4
+2026-04-21 19:12:20 - seekie_pet - INFO - 开始移动: 方向=1, 目标=82.4
+2026-04-21 19:12:31 - seekie_pet - INFO - 到达目标位置: 82.4
+2026-04-21 19:12:31 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=68.2
+2026-04-21 19:12:37 - seekie_pet - INFO - 到达目标位置: 68.2
+2026-04-21 19:12:41 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.1
+2026-04-21 19:12:53 - seekie_pet - INFO - 到达目标位置: 97.1
+2026-04-21 19:12:53 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=91.2
+2026-04-21 19:12:55 - seekie_pet - INFO - 到达目标位置: 91.2
+2026-04-21 19:13:03 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=67.6
+2026-04-21 19:13:13 - seekie_pet - INFO - 到达目标位置: 67.6
+2026-04-21 19:13:13 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.0
+2026-04-21 19:13:22 - seekie_pet - INFO - 到达目标位置: 90.0
+2026-04-21 19:13:23 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=86.8
+2026-04-21 19:13:24 - seekie_pet - INFO - 到达目标位置: 86.8
+2026-04-21 19:13:33 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=74.2
+2026-04-21 19:13:38 - seekie_pet - INFO - 到达目标位置: 74.2
+2026-04-21 19:13:43 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=55.0
+2026-04-21 19:13:51 - seekie_pet - INFO - 到达目标位置: 55.0
+2026-04-21 19:13:53 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.4
+2026-04-21 19:14:10 - seekie_pet - INFO - 到达目标位置: 96.4
+2026-04-21 19:14:10 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=62.1
+2026-04-21 19:14:25 - seekie_pet - INFO - 到达目标位置: 62.1
+2026-04-21 19:14:25 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.0
+2026-04-21 19:14:36 - seekie_pet - INFO - 到达目标位置: 90.0
+2026-04-21 19:14:36 - seekie_pet - INFO - 开始移动: 方向=1, 目标=97.8
+2026-04-21 19:14:40 - seekie_pet - INFO - 到达目标位置: 97.8
+2026-04-21 19:14:46 - seekie_pet - INFO - 开始移动: 方向=1, 目标=99.5
+2026-04-21 19:14:47 - seekie_pet - INFO - 到达目标位置: 99.5
+2026-04-21 19:14:56 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=98.5
+2026-04-21 19:14:57 - seekie_pet - INFO - 到达目标位置: 98.5
+2026-04-21 19:15:06 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=82.3
+2026-04-21 19:15:13 - seekie_pet - INFO - 到达目标位置: 82.3
+2026-04-21 19:15:17 - seekie_pet - INFO - 开始移动: 方向=1, 目标=94.0
+2026-04-21 19:15:21 - seekie_pet - INFO - 到达目标位置: 94.0
+2026-04-21 19:15:27 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=64.3
+2026-04-21 19:15:39 - seekie_pet - INFO - 到达目标位置: 64.3
+2026-04-21 19:15:39 - seekie_pet - INFO - 开始移动: 方向=1, 目标=69.3
+2026-04-21 19:15:41 - seekie_pet - INFO - 到达目标位置: 69.3
+2026-04-21 19:15:49 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=50.1
+2026-04-21 19:15:57 - seekie_pet - INFO - 到达目标位置: 50.1
+2026-04-21 19:15:59 - seekie_pet - INFO - 开始移动: 方向=1, 目标=73.5
+2026-04-21 19:16:09 - seekie_pet - INFO - 到达目标位置: 73.5
+2026-04-21 19:16:09 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=57.9
+2026-04-21 19:16:13 - seekie_pet - INFO - 鼠标位置: x=4, y=39, 中心=(25,25)
+2026-04-21 19:16:13 - seekie_pet - INFO - 正上方区域: 左=5, 右=45, 上=0, 下=25
+2026-04-21 19:16:13 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:16:15 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:16:16 - seekie_pet - INFO - 到达目标位置: 57.9
+2026-04-21 19:16:19 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=54.5
+2026-04-21 19:16:20 - seekie_pet - INFO - 到达目标位置: 54.5
+2026-04-21 19:16:24 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 19:17:28 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 19:17:28 - seekie_pet - INFO - 开始移动: 方向=1, 目标=56.8
+2026-04-21 19:17:28 - seekie_pet - INFO - 鼠标位置: x=13, y=40, 中心=(25,25)
+2026-04-21 19:17:28 - seekie_pet - INFO - 正上方区域: 左=5, 右=45, 上=0, 下=25
+2026-04-21 19:17:28 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:17:28 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:17:29 - seekie_pet - INFO - 到达目标位置: 56.8
+2026-04-21 19:17:38 - seekie_pet - INFO - 开始移动: 方向=1, 目标=80.6
+2026-04-21 19:17:47 - seekie_pet - INFO - 到达目标位置: 80.6
+2026-04-21 19:17:48 - seekie_pet - INFO - 开始移动: 方向=1, 目标=92.3
+2026-04-21 19:17:52 - seekie_pet - INFO - 到达目标位置: 92.3
+2026-04-21 19:17:58 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=51.2
+2026-04-21 19:18:15 - seekie_pet - INFO - 到达目标位置: 51.2
+2026-04-21 19:18:15 - seekie_pet - INFO - 开始移动: 方向=1, 目标=54.5
+2026-04-21 19:18:16 - seekie_pet - INFO - 到达目标位置: 54.5
+2026-04-21 19:18:25 - seekie_pet - INFO - 开始移动: 方向=1, 目标=85.3
+2026-04-21 19:18:35 - seekie_pet - INFO - 鼠标位置: x=48, y=14, 中心=(25,25)
+2026-04-21 19:18:35 - seekie_pet - INFO - 正上方区域: 左=5, 右=45, 上=0, 下=25
+2026-04-21 19:18:35 - seekie_pet - INFO - 鼠标不在正上方区域
+2026-04-21 19:18:35 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:18:38 - seekie_pet - INFO - 到达目标位置: 85.3
+2026-04-21 19:18:38 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=69.6
+2026-04-21 19:18:44 - seekie_pet - INFO - 到达目标位置: 69.6
+2026-04-21 19:18:48 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.0
+2026-04-21 19:18:55 - seekie_pet - INFO - 到达目标位置: 88.0
+2026-04-21 19:18:58 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.3
+2026-04-21 19:19:01 - seekie_pet - INFO - 到达目标位置: 96.3
+2026-04-21 19:19:08 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=69.1
+2026-04-21 19:19:19 - seekie_pet - INFO - 到达目标位置: 69.1
+2026-04-21 19:19:19 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=63.3
+2026-04-21 19:19:22 - seekie_pet - INFO - 到达目标位置: 63.3
+2026-04-21 19:19:29 - seekie_pet - INFO - 开始移动: 方向=1, 目标=79.7
+2026-04-21 19:19:36 - seekie_pet - INFO - 到达目标位置: 79.7
+2026-04-21 19:19:39 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=78.4
+2026-04-21 19:19:40 - seekie_pet - INFO - 到达目标位置: 78.4
+2026-04-21 19:19:49 - seekie_pet - INFO - 开始移动: 方向=1, 目标=86.3
+2026-04-21 19:19:53 - seekie_pet - INFO - 到达目标位置: 86.3
+2026-04-21 19:19:56 - seekie_pet - INFO - 系统11秒无输入活动，进入睡眠状态
+2026-04-21 19:19:59 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 19:19:59 - seekie_pet - INFO - 开始移动: 方向=1, 目标=91.1
+2026-04-21 19:20:01 - seekie_pet - INFO - 到达目标位置: 91.1
+2026-04-21 19:20:09 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=86.8
+2026-04-21 19:20:11 - seekie_pet - INFO - 到达目标位置: 86.8
+2026-04-21 19:20:19 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=54.2
+2026-04-21 19:20:33 - seekie_pet - INFO - 到达目标位置: 54.2
+2026-04-21 19:20:33 - seekie_pet - INFO - 开始移动: 方向=1, 目标=95.6
+2026-04-21 19:20:50 - seekie_pet - INFO - 到达目标位置: 95.6
+2026-04-21 19:20:50 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=52.0
+2026-04-21 19:21:09 - seekie_pet - INFO - 到达目标位置: 52.0
+2026-04-21 19:21:09 - seekie_pet - INFO - 开始移动: 方向=1, 目标=56.8
+2026-04-21 19:21:11 - seekie_pet - INFO - 到达目标位置: 56.8
+2026-04-21 19:21:19 - seekie_pet - INFO - 开始移动: 方向=1, 目标=58.8
+2026-04-21 19:21:19 - seekie_pet - INFO - 到达目标位置: 58.8
+2026-04-21 19:21:29 - seekie_pet - INFO - 开始移动: 方向=1, 目标=89.3
+2026-04-21 19:21:42 - seekie_pet - INFO - 到达目标位置: 89.3
+2026-04-21 19:21:42 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=68.6
+2026-04-21 19:21:50 - seekie_pet - INFO - 到达目标位置: 68.6
+2026-04-21 19:21:52 - seekie_pet - INFO - 开始移动: 方向=1, 目标=86.6
+2026-04-21 19:21:59 - seekie_pet - INFO - 到达目标位置: 86.6
+2026-04-21 19:22:02 - seekie_pet - INFO - 开始移动: 方向=1, 目标=94.8
+2026-04-21 19:22:05 - seekie_pet - INFO - 鼠标位置: x=40, y=1, 中心=(25,25)
+2026-04-21 19:22:05 - seekie_pet - INFO - 正上方区域: 左=5, 右=45, 上=0, 下=25
+2026-04-21 19:22:05 - seekie_pet - INFO - 鼠标在机器人正上方区域内
+2026-04-21 19:22:05 - seekie_pet - INFO - 到达目标位置: 94.8
+2026-04-21 19:22:10 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:22:12 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=79.5
+2026-04-21 19:22:18 - seekie_pet - INFO - 到达目标位置: 79.5
+2026-04-21 19:22:22 - seekie_pet - INFO - 开始移动: 方向=1, 目标=88.6
+2026-04-21 19:22:25 - seekie_pet - INFO - 到达目标位置: 88.6
+2026-04-21 19:22:32 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=66.8
+2026-04-21 19:22:41 - seekie_pet - INFO - 到达目标位置: 66.8
+2026-04-21 19:22:42 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=53.3
+2026-04-21 19:22:47 - seekie_pet - INFO - 到达目标位置: 53.3
+2026-04-21 19:22:52 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=51.0
+2026-04-21 19:22:53 - seekie_pet - INFO - 到达目标位置: 51.0
+2026-04-21 19:23:02 - seekie_pet - INFO - 开始移动: 方向=1, 目标=73.8
+2026-04-21 19:23:10 - seekie_pet - INFO - 正在退出应用...
+2026-04-21 19:23:10 - seekie_pet - INFO - 应用已退出
+2026-04-21 19:25:04 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 19:25:04 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 19:25:04 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 19:25:04 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 19:25:04 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 19:25:04 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 19:25:04 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 19:25:04 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 19:25:04 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 19:25:04 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 19:25:04 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 19:25:04 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 19:25:04 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 19:25:04 - seekie_pet - INFO - 线程启动完成
+2026-04-21 19:25:04 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 19:25:04 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 19:25:04 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 19:25:04 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 19:25:14 - seekie_pet - INFO - 开始移动: 方向=1, 目标=91.2
+2026-04-21 19:25:20 - seekie_pet - INFO - 到达目标位置: 91.2
+2026-04-21 19:25:24 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=61.1
+2026-04-21 19:25:36 - seekie_pet - INFO - 到达目标位置: 61.1
+2026-04-21 19:25:36 - seekie_pet - INFO - 开始移动: 方向=1, 目标=83.9
+2026-04-21 19:25:46 - seekie_pet - INFO - 到达目标位置: 83.9
+2026-04-21 19:25:46 - seekie_pet - INFO - 开始移动: 方向=1, 目标=90.4
+2026-04-21 19:25:49 - seekie_pet - INFO - 到达目标位置: 90.4
+2026-04-21 19:25:56 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=51.6
+2026-04-21 19:26:13 - seekie_pet - INFO - 到达目标位置: 51.6
+2026-04-21 19:26:13 - seekie_pet - INFO - 开始移动: 方向=1, 目标=79.0
+2026-04-21 19:26:24 - seekie_pet - INFO - 到达目标位置: 79.0
+2026-04-21 19:26:24 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=61.1
+2026-04-21 19:26:32 - seekie_pet - INFO - 到达目标位置: 61.1
+2026-04-21 19:26:34 - seekie_pet - INFO - 开始移动: 方向=1, 目标=67.3
+2026-04-21 19:26:37 - seekie_pet - INFO - 到达目标位置: 67.3
+2026-04-21 19:26:44 - seekie_pet - INFO - 开始移动: 方向=1, 目标=75.9
+2026-04-21 19:26:48 - seekie_pet - INFO - 到达目标位置: 75.9
+2026-04-21 19:26:54 - seekie_pet - INFO - 开始移动: 方向=1, 目标=78.3
+2026-04-21 19:26:55 - seekie_pet - INFO - 到达目标位置: 78.3
+2026-04-21 19:26:59 - seekie_pet - INFO - 窗口隐藏
+2026-04-21 19:27:02 - seekie_pet - INFO - 窗口显示
+2026-04-21 19:27:03 - seekie_pet - INFO - 鼠标位置: x=0, y=25, 中心=(25,25)
+2026-04-21 19:27:03 - seekie_pet - INFO - 脸部区域: 左=10, 右=40, 上=10, 下=40
+2026-04-21 19:27:03 - seekie_pet - INFO - 鼠标不在脸部区域
+2026-04-21 19:27:04 - seekie_pet - INFO - 开始移动: 方向=1, 目标=96.3
+2026-04-21 19:27:08 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:27:09 - seekie_pet - INFO - 鼠标位置: x=43, y=1, 中心=(25,25)
+2026-04-21 19:27:09 - seekie_pet - INFO - 脸部区域: 左=10, 右=40, 上=10, 下=40
+2026-04-21 19:27:09 - seekie_pet - INFO - 鼠标不在脸部区域
+2026-04-21 19:27:10 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:27:10 - seekie_pet - INFO - 鼠标位置: x=18, y=40, 中心=(25,25)
+2026-04-21 19:27:10 - seekie_pet - INFO - 脸部区域: 左=10, 右=40, 上=10, 下=40
+2026-04-21 19:27:10 - seekie_pet - INFO - 鼠标在机器人脸部区域内
+2026-04-21 19:27:12 - seekie_pet - INFO - 到达目标位置: 96.3
+2026-04-21 19:27:14 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=58.5
+2026-04-21 19:27:17 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:27:20 - seekie_pet - INFO - 鼠标位置: x=1, y=10, 中心=(25,25)
+2026-04-21 19:27:20 - seekie_pet - INFO - 脸部区域: 左=10, 右=40, 上=10, 下=40
+2026-04-21 19:27:20 - seekie_pet - INFO - 鼠标不在脸部区域
+2026-04-21 19:27:21 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:27:30 - seekie_pet - INFO - 到达目标位置: 58.5
+2026-04-21 19:27:30 - seekie_pet - INFO - 开始移动: 方向=1, 目标=72.7
+2026-04-21 19:27:36 - seekie_pet - INFO - 到达目标位置: 72.7
+2026-04-21 19:27:40 - seekie_pet - INFO - 开始移动: 方向=1, 目标=81.0
+2026-04-21 19:27:44 - seekie_pet - INFO - 到达目标位置: 81.0
+2026-04-21 19:27:50 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=56.3
+2026-04-21 19:29:02 - seekie_pet - INFO - 窗口初始化完成
+2026-04-21 19:29:02 - seekie_pet - INFO - 加载机器人图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Robot_50x50.png
+2026-04-21 19:29:02 - seekie_pet - INFO - [成功] 机器人图片加载成功
+2026-04-21 19:29:02 - seekie_pet - INFO - 加载睡眠图片: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\Sleep.png
+2026-04-21 19:29:02 - seekie_pet - INFO - [成功] 睡眠图片加载成功
+2026-04-21 19:29:02 - seekie_pet - INFO - 加载动画精灵图: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\see-left-and-right.png
+2026-04-21 19:29:02 - seekie_pet - INFO - 精灵图尺寸: (300, 350)
+2026-04-21 19:29:02 - seekie_pet - INFO - 检测到 7 帧动画 (每帧50x50)
+2026-04-21 19:29:02 - seekie_pet - INFO - [成功] 动画精灵图加载成功，共7帧
+2026-04-21 19:29:02 - seekie_pet - INFO - 托盘图标加载成功: C:\Users\fkdlz\Documents\VsCodeProjects\seekie_pet\main_pic\robot-icon.png
+2026-04-21 19:29:02 - seekie_pet - INFO - 系统托盘初始化完成
+2026-04-21 19:29:02 - seekie_pet - INFO - 启动输入活动检测...
+2026-04-21 19:29:02 - seekie_pet - INFO - 启动快捷键监控...
+2026-04-21 19:29:02 - seekie_pet - INFO - 线程启动完成
+2026-04-21 19:29:02 - seekie_pet - INFO - 检测阈值: 10秒无输入活动进入睡眠
+2026-04-21 19:29:02 - seekie_pet - INFO - 桌面宠物机器人初始化完成
+2026-04-21 19:29:02 - seekie_pet - INFO - 系统52秒无输入活动，进入睡眠状态
+2026-04-21 19:29:02 - seekie_pet - INFO - 启动桌面宠物机器人...
+2026-04-21 19:29:02 - seekie_pet - INFO - 快捷键注册成功: alt+s - 打开截图软件
+2026-04-21 19:29:06 - seekie_pet - INFO - 检测到输入活动，从睡眠状态唤醒
+2026-04-21 19:29:06 - seekie_pet - INFO - 鼠标位置: x=1, y=18, 图片尺寸=50x50
+2026-04-21 19:29:06 - seekie_pet - INFO - 鼠标在机器人图片区域内，触发动画
+2026-04-21 19:29:11 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=59.8
+2026-04-21 19:29:15 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:29:15 - seekie_pet - INFO - 鼠标位置: x=1, y=29, 图片尺寸=50x50
+2026-04-21 19:29:15 - seekie_pet - INFO - 鼠标在机器人图片区域内，触发动画
+2026-04-21 19:29:18 - seekie_pet - INFO - 到达目标位置: 59.8
+2026-04-21 19:29:21 - seekie_pet - INFO - 开始移动: 方向=1, 目标=79.6
+2026-04-21 19:29:24 - seekie_pet - INFO - 鼠标离开机器人
+2026-04-21 19:29:30 - seekie_pet - INFO - 到达目标位置: 79.6
+2026-04-21 19:29:32 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=70.3
+2026-04-21 19:29:35 - seekie_pet - INFO - 到达目标位置: 70.3
+2026-04-21 19:29:42 - seekie_pet - INFO - 开始移动: 方向=-1, 目标=51.3
+2026-04-21 19:29:49 - seekie_pet - INFO - 到达目标位置: 51.3
+2026-04-21 19:29:52 - seekie_pet - INFO - 开始移动: 方向=1, 目标=77.8
+2026-04-21 19:29:54 - seekie_pet - INFO - 正在退出应用...
+2026-04-21 19:29:54 - seekie_pet - INFO - 应用已退出
