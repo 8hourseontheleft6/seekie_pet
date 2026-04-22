@@ -150,6 +150,13 @@ seekie_pet/
 
 ## 版本历史
 
+### v3.4.0 (2026-04-22) - 模块化重构
+- **模块化架构**: 将872行main.py拆分为8个独立模块
+- **核心模块**: window.py, animation.py, movement.py, input_detection.py, hotkeys.py, tray.py, settings.py, robot.py
+- **代码清晰度**: 每个模块职责单一，易于维护和扩展
+- **主程序简化**: main.py从872行减少到约50行
+- **版本更新**: 更新版本号为3.4.0
+
 ### v3.3.3 (2026-04-21) - 鼠标悬停动画功能
 - **鼠标悬停动画**: 添加鼠标悬停机器人图片触发动画功能
 - **动画精灵图**: 支持see-left-and-right.png精灵图动画（7帧）
