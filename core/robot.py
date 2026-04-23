@@ -85,7 +85,15 @@ class DesktopPetRobot:
             error(f"线程启动失败: {e}")
     
     def _redraw(self):
-        """重绘窗口（使用锁避免频闪）"""
+        """重绘窗口 - 委托到主线程执行"""
+        if not self.window_mgr.window:
+            return
+        
+        # 所有重绘操作委托到Tkinter主线程
+        self.window_mgr.window.after(0, self._do_redraw)
+    
+    def _do_redraw(self):
+        """实际重绘（在主线程执行）"""
         with self._redraw_lock:
             photo = self.anim_mgr.get_current_photo(self.input_detector.is_sleeping)
             self.window_mgr.draw(photo)

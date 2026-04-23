@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ========================================
-echo Seekie Pet 启动器
+echo Seekie Pet - 重构版启动脚本
 echo ========================================
 echo.
 
@@ -33,63 +33,28 @@ if errorlevel 1 (
     pip install keyboard
 )
 
-echo.
-echo ========================================
-echo 选择启动版本
-echo ========================================
-echo 1. 原版 (main.py) - 稳定版
-echo    - 版本: 3.2.0 (Web设置窗口版)
-echo    - 特点: 经过充分测试，功能完整
-echo.
-echo 2. 重构版 (main_refactored.py) - 开发版
-echo    - 版本: 3.3.0 (模块化重构版)
-echo    - 特点: 模块化架构，增强功能
-echo.
-echo 3. 自动选择 (推荐)
-echo    - 优先尝试重构版，失败则使用原版
-echo.
-set /p choice="请选择 (1/2/3，默认3): "
+pip show flask >nul 2>&1
+if errorlevel 1 (
+    echo 安装Flask...
+    pip install flask
+)
 
-if "%choice%"=="" set choice=3
-if "%choice%"=="1" goto run_original
-if "%choice%"=="2" goto run_refactored
-if "%choice%"=="3" goto run_auto
+echo.
+echo ========================================
+echo 启动Seekie Pet重构版...
+echo ========================================
+echo.
 
-:run_auto
-echo.
-echo ========================================
-echo 自动选择模式
-echo ========================================
-echo 优先尝试重构版...
-echo.
+REM 运行重构版
 python main_refactored.py
+
 if errorlevel 1 (
     echo.
     echo ========================================
-    echo 重构版启动失败，使用原版...
+    echo 重构版启动失败，尝试使用原版...
     echo ========================================
     echo.
     python main.py
 )
-goto end
 
-:run_original
-echo.
-echo ========================================
-echo 启动原版 (稳定版)
-echo ========================================
-echo.
-python main.py
-goto end
-
-:run_refactored
-echo.
-echo ========================================
-echo 启动重构版 (开发版)
-echo ========================================
-echo.
-python main_refactored.py
-goto end
-
-:end
 pause

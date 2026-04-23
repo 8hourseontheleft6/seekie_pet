@@ -1,7 +1,30 @@
 {
-  "move_interval": 10,
-  "move_speed": 2.5,
-  "screenshot_hotkey": "alt+s",
+  "version": "3.3.0",
   "window_title": "Seekie Setup",
-  "theme": "sky-blue"
+  "enable_logging": true,
+  "log_level": "INFO",
+  "robot": {
+    "move_interval": 10,
+    "move_speed": 2.5,
+    "robot_size": 50,
+    "robot_color": "#4169E1"
+  },
+  "hotkeys": {
+    "screenshot": "alt+s",
+    "toggle_visibility": "",
+    "increase_speed": "",
+    "decrease_speed": ""
+  },
+  "appearance": {
+    "theme": "sky-blue",
+    "transparency": 0.99,
+    "always_on_top": true,
+    "show_sleep_indicator": true
+  },
+  "behavior": {
+    "inactivity_threshold": 10,
+    "enable_sleep_mode": true,
+    "enable_input_detection": true,
+    "move_only_on_right_side": true
+  }
 }

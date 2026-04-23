@@ -1,9 +1,9 @@
-# Seekie Pet v3.3.3
+# Seekie Pet v3.3.4
 
 一个轻量级的桌面宠物应用，显示一个机器人在菜单栏区域移动，支持快捷键功能和设置窗口。
 
-**版本: 3.3.3**  
-**最后更新: 2026-04-21**
+**版本: 3.3.4**  
+**最后更新: 2026-04-23**
 
 
 ## 前言
@@ -96,17 +96,24 @@
    - **Ctrl+J**: 快速打开截图软件
    - 支持多种截图方式：Windows截图工具、PrintScreen键、Win+Shift+S快捷键、画图工具
 
-## 项目结构 (v3.3.2)
+## 项目结构 (v3.3.4)
 
 ```
 seekie_pet/
-├── main.py                   # 主程序文件（模块化重构版，修复所有问题）
-├── settings_window_v2.py     # 现代化设置窗口程序（备用）
+├── main.py                   # 主程序文件（模块化重构版）
 ├── config.json               # 配置文件（保存所有设置）
-├── improvement_plan.md       # 项目改进计划
-├── improvement_summary.md    # 改进总结
-├── run.bat                   # 智能启动器（可选择版本）
-├── run_refactored.bat        # 重构版专用启动器
+├── run.bat                   # 启动器
+│
+├── core/                     # 核心模块
+│   ├── __init__.py           # 模块初始化
+│   ├── window.py             # 窗口管理
+│   ├── animation.py          # 动画管理
+│   ├── movement.py           # 移动逻辑
+│   ├── input_detection.py    # 输入检测
+│   ├── hotkeys.py            # 快捷键
+│   ├── tray.py               # 系统托盘
+│   ├── settings.py           # 设置窗口
+│   └── robot.py              # 主类整合
 │
 ├── config/                   # 配置管理模块
 │   └── config_manager.py     # 增强版配置管理器
@@ -124,6 +131,7 @@ seekie_pet/
 ├── main_pic/                 # 图片资源
 │   ├── Robot_50x50.png      # 实际使用的50x50像素机器人图片
 │   ├── Sleep.png            # 睡眠状态图片
+│   ├── see-left-and-right.png # 动画精灵图（7帧）
 │   └── robot-icon.png       # 托盘图标
 │
 ├── web_settings/             # Web设置窗口
@@ -139,6 +147,8 @@ seekie_pet/
 ```
 
 **已删除的文件**:
+- `settings_window_v2.py` - 已删除（功能已整合到core/settings.py）
+- `run_refactored.bat` - 已重命名为run.bat
 - `main_refactored.py` - 已重命名为main.py
 - `README_REFACTORED.md` - 旧版本重构说明文档
 - `main_final.py`, `main_with_mouse_detection.py`, `main_with_input_detection.py` - 测试版本文件
@@ -150,12 +160,11 @@ seekie_pet/
 
 ## 版本历史
 
-### v3.4.0 (2026-04-22) - 模块化重构
-- **模块化架构**: 将872行main.py拆分为8个独立模块
-- **核心模块**: window.py, animation.py, movement.py, input_detection.py, hotkeys.py, tray.py, settings.py, robot.py
-- **代码清晰度**: 每个模块职责单一，易于维护和扩展
-- **主程序简化**: main.py从872行减少到约50行
-- **版本更新**: 更新版本号为3.4.0
+### v3.3.4 (2026-04-23) - 修复版本
+- **初始位置修复**: 窗口创建后立即设置到右下角，不再从左上角闪现
+- **动画频闪修复**: 所有重绘操作委托到Tkinter主线程执行，避免多线程竞争导致频闪
+- **重绘锁优化**: 添加重绘锁(_redraw_lock)确保线程安全
+- **文件清理**: 删除settings_window_v2.py和run_refactored.bat，保留run.bat
 
 ### v3.3.3 (2026-04-21) - 鼠标悬停动画功能
 - **鼠标悬停动画**: 添加鼠标悬停机器人图片触发动画功能
