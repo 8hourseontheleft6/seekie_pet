@@ -20,6 +20,8 @@ class DesktopPetRobot:
         self.config_manager = get_config_manager()
         self.config = get_config()
         self.running = True
+        self._animation_id = None  # 动画ID，用于管理动画播放
+        self._redraw_lock = threading.Lock()  # 重绘锁，避免频闪
         
         # 初始化各模块
         self.window_mgr = WindowManager(self.config)
@@ -83,9 +85,10 @@ class DesktopPetRobot:
             error(f"线程启动失败: {e}")
     
     def _redraw(self):
-        """重绘窗口"""
-        photo = self.anim_mgr.get_current_photo(self.input_detector.is_sleeping)
-        self.window_mgr.draw(photo)
+        """重绘窗口（使用锁避免频闪）"""
+        with self._redraw_lock:
+            photo = self.anim_mgr.get_current_photo(self.input_detector.is_sleeping)
+            self.window_mgr.draw(photo)
     
     def _on_mouse_enter(self, event):
         """鼠标进入事件"""
@@ -114,11 +117,23 @@ class DesktopPetRobot:
         if not self.anim_mgr.animation_frames or not self.anim_mgr.animation_running:
             return
         
-        self.anim_mgr.next_frame()
-        self._redraw()
+        # 使用动画ID来管理，避免重复启动
+        if hasattr(self, '_animation_id') and self._animation_id:
+            self.window_mgr.window.after_cancel(self._animation_id)
         
-        if self.anim_mgr.animation_running:
-            self.window_mgr.window.after(300, self._start_animation_playback)
+        def _animate():
+            if not self.anim_mgr.animation_running:
+                return
+            
+            self.anim_mgr.next_frame()
+            self._redraw()
+            
+            if self.anim_mgr.animation_running:
+                self._animation_id = self.window_mgr.window.after(500, _animate)  # 降低到500ms
+            else:
+                self._animation_id = None
+        
+        self._animation_id = self.window_mgr.window.after(0, _animate)
     
     def _toggle_visibility(self, icon=None, item=None):
         """切换窗口可见性"""

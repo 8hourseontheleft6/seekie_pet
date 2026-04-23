@@ -39,12 +39,44 @@ class WindowManager:
             # 设置透明色
             self.window.attributes('-transparentcolor', 'black')
             
+            # 设置初始位置（右下角）
+            self._set_initial_position()
+            
             info("窗口初始化完成")
             return self.window, self.canvas
             
         except Exception as e:
             error(f"窗口初始化失败: {e}")
             raise
+    
+    def _set_initial_position(self):
+        """设置窗口初始位置到右下角"""
+        if not self.window:
+            return
+        
+        try:
+            screen_width = self.window.winfo_screenwidth()
+            screen_height = self.window.winfo_screenheight()
+            
+            car_size = self.config.robot.robot_size
+            taskbar_height = 40
+            vertical_offset = -5
+            
+            # 初始位置在右下角（位置75对应中间偏右）
+            initial_position = 75
+            if self.config.behavior.move_only_on_right_side:
+                max_x = screen_width - car_size
+                x_pos = int((initial_position - 50) / 50 * (max_x / 2) + (max_x / 2))
+            else:
+                max_x = screen_width - car_size
+                x_pos = int((initial_position - 50) / 50 * max_x)
+            
+            y_pos = screen_height - taskbar_height - car_size + vertical_offset
+            
+            self.window.geometry(f"+{x_pos}+{y_pos}")
+            info(f"窗口初始位置设置: x={x_pos}, y={y_pos}")
+        except Exception as e:
+            error(f"设置初始位置失败: {e}")
     
     def update_position(self, position):
         """更新窗口位置"""
