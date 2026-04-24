@@ -7,6 +7,7 @@ from config.config_manager import get_config_manager, get_config
 from core.window import WindowManager
 from core.animation import AnimationManager
 from core.movement import MovementController
+from core.window_detector import WindowDetector
 from core.input_detection import InputDetector
 from core.hotkeys import HotkeyManager
 from core.tray import TrayManager
@@ -26,7 +27,8 @@ class DesktopPetRobot:
         # 初始化各模块
         self.window_mgr = WindowManager(self.config)
         self.anim_mgr = AnimationManager(self.config)
-        self.movement = MovementController(self.config)
+        self.window_detector = WindowDetector(self.config)
+        self.movement = MovementController(self.config, self.window_detector)
         self.input_detector = InputDetector(self.config)
         self.hotkey_mgr = HotkeyManager(self.config)
         self.tray_mgr = TrayManager(self.config)
@@ -185,6 +187,14 @@ class DesktopPetRobot:
                 if config_check_counter >= 100:
                     self._check_config_update()
                     config_check_counter = 0
+                
+                # 更新当前屏幕坐标（用于窗口检测）
+                if self.window_mgr.window:
+                    try:
+                        x = self.window_mgr.window.winfo_x()
+                        self.movement.set_screen_x(x)
+                    except:
+                        pass
                 
                 # 更新移动
                 redraw_needed = self.movement.update(

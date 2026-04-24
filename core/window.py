@@ -64,12 +64,8 @@ class WindowManager:
             
             # 初始位置在右下角（位置75对应中间偏右）
             initial_position = 75
-            if self.config.behavior.move_only_on_right_side:
-                max_x = screen_width - car_size
-                x_pos = int((initial_position - 50) / 50 * (max_x / 2) + (max_x / 2))
-            else:
-                max_x = screen_width - car_size
-                x_pos = int((initial_position - 50) / 50 * max_x)
+            max_x = screen_width - car_size
+            x_pos = int(initial_position / 100 * max_x)
             
             y_pos = screen_height - taskbar_height - car_size + vertical_offset
             
@@ -91,12 +87,8 @@ class WindowManager:
             taskbar_height = 40
             vertical_offset = -5
             
-            if self.config.behavior.move_only_on_right_side:
-                max_x = screen_width - car_size
-                x_pos = int((position - 50) / 50 * (max_x / 2) + (max_x / 2))
-            else:
-                max_x = screen_width - car_size
-                x_pos = int((position - 50) / 50 * max_x)
+            max_x = screen_width - car_size
+            x_pos = int(position / 100 * max_x)
             
             y_pos = screen_height - taskbar_height - car_size + vertical_offset
             
